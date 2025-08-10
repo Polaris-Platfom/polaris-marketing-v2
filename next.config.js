@@ -6,6 +6,16 @@ const nextConfig = {
   poweredByHeader: false,
   output: 'standalone',
   i18n,
+  // Allow optimized loading of remote images used by blog posts
+  // This enables Next.js Image Optimization for Unsplash assets
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   
   env: {
     // Force correct URLs based on NODE_ENV

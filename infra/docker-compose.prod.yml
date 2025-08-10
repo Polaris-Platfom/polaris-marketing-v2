@@ -1,0 +1,61 @@
+# ==============================================
+# 🚀 POLARIS MARKETING - PRODUCTION DEPLOYMENT
+# ==============================================
+# Stack: Traefik reverse proxy + Marketing app container
+# Domain: www.polarisplatform.ch (and polarisplatform.ch)
+# Notes:
+# - Requires a valid .env file in /opt/polaris-marketing on the server
+# - Traefik will use Let's Encrypt HTTP-01 for TLS certificates
+
+services:
+  proxy:
+    image: traefik:v3.1
+    container_name: traefik-proxy
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.letsencrypt.acme.email=${LETSENCRYPT_EMAIL}
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge=true
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web
+      - --api.dashboard=true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+    restart: unless-stopped
+
+  marketing:
+    image: ${IMAGE_NAME}
+    container_name: polaris-marketing
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    depends_on:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.marketing.rule=Host(`www.polarisplatform.ch`) || Host(`polarisplatform.ch`)"
+      - "traefik.http.routers.marketing.entrypoints=websecure"
+      - "traefik.http.routers.marketing.tls=true"
+      - "traefik.http.routers.marketing.tls.certresolver=letsencrypt"
+      - "traefik.http.services.marketing.loadbalancer.server.port=3000"
+      # Optional redirect HTTP→HTTPS
+      - "traefik.http.routers.marketing-http.rule=Host(`www.polarisplatform.ch`) || Host(`polarisplatform.ch`)"
+      - "traefik.http.routers.marketing-http.entrypoints=web"
+      - "traefik.http.routers.marketing-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: polaris-network
+    external: false
+
+
