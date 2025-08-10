@@ -1,0 +1,23 @@
+{
+  "pageTitle": "Contacto - Polaris Platform",
+  "pageDescription": "Contacta con el equipo de Polaris Platform",
+  "contactDescription": "Estamos aquí para ayudarte con cualquier pregunta sobre Polaris Platform. Contáctanos hoy.",
+  "getInTouch": "Ponte en contacto",
+  "email": "Correo electrónico",
+  "phone": "Teléfono",
+  "address": "Dirección",
+  "sendMessage": "Enviar mensaje",
+  "form": {
+    "name": "Nombre completo *",
+    "email": "Correo electrónico *",
+    "phone": "Teléfono (opcional)",
+    "company": "Empresa/Organización (opcional)",
+    "message": "Tu mensaje *",
+    "sendButton": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": {
+      "title": "¡Mensaje enviado exitosamente!",
+      "description": "Gracias por contactarnos. Te responderemos pronto."
+    }
+  }
+} 

@@ -1,0 +1,113 @@
+{
+  "valueProposition": {
+    "description": "valueProposition.description",
+    "multiCommunity": {
+      "title": "valueProposition.multiCommunity.title",
+      "description": "valueProposition.multiCommunity.description"
+    },
+    "democraticGovernance": {
+      "title": "valueProposition.democraticGovernance.title",
+      "description": "valueProposition.democraticGovernance.description"
+    },
+    "collaborativeFunding": {
+      "title": "valueProposition.collaborativeFunding.title",
+      "description": "valueProposition.collaborativeFunding.description"
+    },
+    "secureTransparent": {
+      "title": "valueProposition.secureTransparent.title",
+      "description": "valueProposition.secureTransparent.description"
+    },
+    "subtitle": "valueProposition.subtitle",
+    "transparency": {
+      "title": "valueProposition.transparency.title",
+      "description": "valueProposition.transparency.description"
+    },
+    "participation": {
+      "title": "valueProposition.participation.title",
+      "description": "valueProposition.participation.description"
+    },
+    "innovation": {
+      "title": "valueProposition.innovation.title",
+      "description": "valueProposition.innovation.description"
+    }
+  },
+  "cta": {
+    "description": "cta.description",
+    "startTrial": "cta.startTrial",
+    "signIn": "cta.signIn",
+    "disclaimer": "cta.disclaimer",
+    "primaryButton": "cta.primaryButton",
+    "secondaryButton": "cta.secondaryButton"
+  },
+  "testimonials": {
+    "testimonial1": {
+      "quote": "testimonials.testimonial1.quote",
+      "author": "testimonials.testimonial1.author",
+      "role": "testimonials.testimonial1.role",
+      "community": "testimonials.testimonial1.community",
+      "name": "testimonials.testimonial1.name",
+      "content": "testimonials.testimonial1.content"
+    },
+    "testimonial2": {
+      "quote": "testimonials.testimonial2.quote",
+      "author": "testimonials.testimonial2.author",
+      "role": "testimonials.testimonial2.role",
+      "community": "testimonials.testimonial2.community",
+      "name": "testimonials.testimonial2.name",
+      "content": "testimonials.testimonial2.content"
+    },
+    "testimonial3": {
+      "quote": "testimonials.testimonial3.quote",
+      "author": "testimonials.testimonial3.author",
+      "role": "testimonials.testimonial3.role",
+      "community": "testimonials.testimonial3.community",
+      "name": "testimonials.testimonial3.name",
+      "content": "testimonials.testimonial3.content"
+    },
+    "subtitle": "testimonials.subtitle"
+  },
+  "howItWorks": {
+    "description": "howItWorks.description",
+    "step5": {
+      "title": "howItWorks.step5.title",
+      "description": "howItWorks.step5.description"
+    }
+  },
+  "features": {
+    "multiCommunity": {
+      "title": "features.multiCommunity.title",
+      "description": "features.multiCommunity.description"
+    },
+    "democraticVoting": {
+      "title": "features.democraticVoting.title",
+      "description": "features.democraticVoting.description"
+    },
+    "secureFund": {
+      "title": "features.secureFund.title",
+      "description": "features.secureFund.description"
+    },
+    "realTimeAnalytics": {
+      "title": "features.realTimeAnalytics.title",
+      "description": "features.realTimeAnalytics.description"
+    },
+    "enterpriseSecurity": {
+      "title": "features.enterpriseSecurity.title",
+      "description": "features.enterpriseSecurity.description"
+    },
+    "globalAccessibility": {
+      "title": "features.globalAccessibility.title",
+      "description": "features.globalAccessibility.description"
+    },
+    "automatedWorkflows": {
+      "title": "features.automatedWorkflows.title",
+      "description": "features.automatedWorkflows.description"
+    },
+    "roleBasedPermissions": {
+      "title": "features.roleBasedPermissions.title",
+      "description": "features.roleBasedPermissions.description"
+    }
+  },
+  "hero": {
+    "tryDemo": "Try Demo"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pageTitle": "pageTitle",
+  "pageDescription": "pageDescription",
+  "contactDescription": "contactDescription",
+  "getInTouch": "getInTouch",
+  "email": "email",
+  "phone": "phone",
+  "address": "address",
+  "sendMessage": "sendMessage",
+  "form": {
+    "name": "form.name",
+    "email": "form.email",
+    "phone": "form.phone",
+    "company": "form.company",
+    "message": "form.message",
+    "sendButton": "form.sendButton"
+  }
+}

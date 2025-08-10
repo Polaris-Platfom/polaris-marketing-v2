@@ -1,0 +1,26 @@
+# Google Sheets Configuration Example
+# Copy these variables to your .env.local file and fill in your actual values
+
+# Google Sheets ID - Extract from your spreadsheet URL
+# Example: https://docs.google.com/spreadsheets/d/1uiHpRpOcAof8cFMdCGfFIybOWf3V1oN_8BcYTO3URBU/edit
+GOOGLE_SHEETS_ID=1uiHpRpOcAof8cFMdCGfFIybOWf3V1oN_8BcYTO3URBU
+
+# Service Account Email - From the JSON credentials file
+GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@your-project-id.iam.gserviceaccount.com
+
+# Private Key - From the JSON credentials file (include the full key with newlines)
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n"
+
+# Additional configuration (already in your .env if you followed EMAIL_SETUP.md)
+SMTP_HOST=smtp.office365.com
+SMTP_PORT=587
+SMTP_USER=osmel@polarisplatform.ch
+SMTP_PASSWORD=your-app-password
+SMTP_FROM=osmel@polarisplatform.ch
+SMTP_FROM_NAME=Polaris Platform
+
+CONTACT_EMAIL=osmel@polarisplatform.ch
+SUPPORT_EMAIL=osmel@polarisplatform.ch
+NEWSLETTER_EMAIL=osmel@polarisplatform.ch
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000 

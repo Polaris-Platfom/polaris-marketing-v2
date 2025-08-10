@@ -1,0 +1,71 @@
+{
+  "title": "Polaris Blog",
+  "subtitle": "Neuigkeiten, Einblicke und Updates",
+  "description": "Entdecken Sie Einblicke, Leitfäden und Updates zur Gemeinschaftsführung und Blockchain-Technologie.",
+  "readMore": "Weiterlesen",
+  "loadMore": "Mehr Artikel laden",
+  "readTime": "{{minutes}} Min. Lesezeit",
+  "author": "Autor",
+  "publishedOn": "Veröffentlicht am",
+  "category": "Kategorie",
+  "tags": "Tags",
+  "share": "Teilen",
+  "relatedPosts": "Verwandte Beiträge",
+  "latestPosts": "Neueste Beiträge",
+  "popularPosts": "Beliebte Beiträge",
+  "searchPosts": "Beiträge suchen",
+  "searchPlaceholder": "Suche nach Beiträgen...",
+  "noResults": "Keine Ergebnisse gefunden",
+  "loading": "Wird geladen...",
+  "error": "Fehler beim Laden der Beiträge",
+  "tryAgain": "Erneut versuchen",
+  "filterByCategory": "Nach Kategorie filtern",
+  "allCategories": "Alle Kategorien",
+  "showingAllPosts": "{{count}} Artikel angezeigt",
+  "showingCategoryPosts": "{{count}} Artikel in {{category}} angezeigt",
+  "noPostsFound": "Keine Artikel in der Kategorie {{category}} gefunden",
+  "categories": {
+    "announcements": "Ankündigungen",
+    "features": "Funktionen",
+    "tutorials": "Tutorials",
+    "case_studies": "Fallstudien",
+    "community": "Gemeinschaft",
+    "technology": "Technologie",
+    "governance": "Governance",
+    "updates": "Updates"
+  },
+  "filters": {
+    "all": "Alle",
+    "recent": "Kürzlich",
+    "popular": "Beliebt",
+    "featured": "Empfohlen"
+  },
+  "pagination": {
+    "previous": "Vorherige",
+    "next": "Nächste",
+    "page": "Seite",
+    "of": "von",
+    "showing": "Zeige",
+    "results": "Ergebnisse"
+  },
+  "newsletter": {
+    "title": "Newsletter abonnieren",
+    "description": "Erhalten Sie die neuesten Blog-Updates direkt in Ihren Posteingang.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "subscribe": "Abonnieren",
+    "success": "Erfolgreich abonniert!",
+    "error": "Fehler beim Abonnieren. Versuchen Sie es erneut."
+  },
+  "comments": {
+    "title": "Kommentare",
+    "noComments": "Noch keine Kommentare",
+    "writeComment": "Kommentar schreiben",
+    "post": "Posten",
+    "reply": "Antworten",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "like": "Gefällt mir",
+    "report": "Melden",
+    "placeholder": "Schreiben Sie Ihren Kommentar hier..."
+  }
+} 

@@ -1,0 +1,52 @@
+{
+  "footer": {
+    "stayUpdated": "footer.stayUpdated",
+    "enterEmail": "footer.enterEmail",
+    "allRightsReserved": "footer.allRightsReserved",
+    "cookiePolicy": "footer.cookiePolicy"
+  },
+  "blogPost": {
+    "categories": {
+      "community": "community",
+      "technology": "technology",
+      "caseStudy": "caseStudy",
+      "zukunft": "zukunft",
+      "Case Study": "Case Study",
+      "Community": "Community",
+      "Technology": "Technology",
+      "fallstudien": "fallstudien"
+    },
+    "tags": {
+      "innovation": "innovation"
+    }
+  },
+  "categories": {
+    "technology": "categories.technology",
+    "community": "categories.community",
+    "case-study": "categories.case-study",
+    "future": "categories.future",
+    "tutorial": "categories.tutorial"
+  },
+  "tags": {
+    "blockchain": "tags.blockchain",
+    "governance": "tags.governance",
+    "democracy": "tags.democracy",
+    "community": "tags.community",
+    "technology": "tags.technology",
+    "transparency": "tags.transparency",
+    "participation": "tags.participation",
+    "trust": "tags.trust",
+    "case-study": "tags.case-study",
+    "community-funding": "tags.community-funding",
+    "park-renovation": "tags.park-renovation",
+    "success-story": "tags.success-story",
+    "implementation": "tags.implementation",
+    "best-practices": "tags.best-practices",
+    "digital-democracy": "tags.digital-democracy",
+    "future": "tags.future",
+    "innovation": "tags.innovation",
+    "voting": "tags.voting",
+    "step-by-step": "tags.step-by-step",
+    "tutorial": "tags.tutorial"
+  }
+}

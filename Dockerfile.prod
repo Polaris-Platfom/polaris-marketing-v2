@@ -1,0 +1,92 @@
+# ==============================================
+# 🏗️ POLARIS MARKETING - PRODUCTION BUILD
+# ==============================================
+# Multi-stage build optimized for monorepo
+# Security-first approach with non-root user
+
+# Build dependencies stage
+FROM node:20-alpine AS dependencies
+RUN apk add --no-cache libc6-compat curl
+WORKDIR /workspace
+
+# Copy workspace configuration
+COPY package*.json ./
+COPY turbo.json ./
+COPY packages/ ./packages/
+COPY apps/marketing/package.json ./apps/marketing/
+
+# Install dependencies with npm ci for production
+RUN npm ci --only=production && npm cache clean --force
+
+# Development dependencies for build
+FROM node:20-alpine AS dev-dependencies  
+RUN apk add --no-cache libc6-compat
+WORKDIR /workspace
+
+COPY package*.json ./
+COPY turbo.json ./
+COPY packages/ ./packages/
+COPY apps/marketing/package.json ./apps/marketing/
+
+RUN npm ci && npm cache clean --force
+
+# Build stage
+FROM node:20-alpine AS builder
+RUN apk add --no-cache libc6-compat
+WORKDIR /workspace
+
+# Copy dependencies
+COPY --from=dev-dependencies /workspace/node_modules ./node_modules
+COPY --from=dev-dependencies /workspace/package*.json ./
+
+# Copy source code
+COPY turbo.json ./
+COPY packages/ ./packages/
+COPY apps/marketing/ ./apps/marketing/
+
+# Build the application
+WORKDIR /workspace/apps/marketing
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN npm run build
+
+# Production runtime stage  
+FROM node:20-alpine AS runner
+
+# Install runtime dependencies
+RUN apk add --no-cache \
+    curl \
+    dumb-init \
+    && addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 nextjs
+
+WORKDIR /app
+
+# Copy production dependencies
+COPY --from=dependencies --chown=nextjs:nodejs /workspace/node_modules ./node_modules
+
+# Copy built application - Next.js standalone output structure
+# Copy standalone runtime and app-specific files
+COPY --from=builder --chown=nextjs:nodejs /workspace/apps/marketing/.next/standalone/apps/marketing/ ./
+COPY --from=builder --chown=nextjs:nodejs /workspace/apps/marketing/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /workspace/apps/marketing/public ./public
+# Copy shared runtime dependencies
+COPY --from=builder --chown=nextjs:nodejs /workspace/apps/marketing/.next/standalone/node_modules ./node_modules
+
+# Security: Use non-root user
+USER nextjs
+
+# Network configuration
+EXPOSE 3000
+ENV PORT=3000
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD curl -f http://localhost:3000/api/health || exit 1
+
+# Use dumb-init for proper signal handling
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "server.js"]

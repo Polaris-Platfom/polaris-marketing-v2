@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog", 
+    "contact": "Contact",
+    "login": "Log In",
+    "signUp": "Sign Up Free",
+    "dashboard": "Dashboard",
+    "features": "Features",
+    "pricing": "Pricing",
+    "support": "Support",
+    "docs": "Documentation"
+  },
+  "footer": {
+    "about": "About Polaris",
+    "team": "Team", 
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "stayUpdated": "Stay Updated",
+    "newsletterDescription": "Subscribe to our newsletter to receive updates on platform development and community news.",
+    "enterEmail": "Enter your email",
+    "subscribe": "Subscribe",
+    "socialMedia": "Follow Us",
+    "company": "Company",
+    "product": "Product",
+    "legal": "Legal",
+    "support": "Support"
+  }
+} 

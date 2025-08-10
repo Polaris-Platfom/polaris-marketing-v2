@@ -1,0 +1,28 @@
+{
+  "readTime": "readTime",
+  "categories": {
+    "technologie": "categories.technologie",
+    "gemeinschaft": "categories.gemeinschaft",
+    "finanzen": "categories.finanzen",
+    "fallstudien": "categories.fallstudien",
+    "zukunft": "categories.zukunft",
+    "case-study": "case-study",
+    "future": "future",
+    "tutorial": "tutorial"
+  },
+  "loadMore": "loadMore",
+  "filterByCategory": "filterByCategory",
+  "allCategories": "allCategories",
+  "showingAllPosts_one": "showingAllPosts",
+  "showingAllPosts_other": "showingAllPosts",
+  "keywords": "keywords",
+  "allTags": "allTags",
+  "sortByDate": "sortByDate",
+  "sortByReadTime": "sortByReadTime",
+  "sortByTitle": "sortByTitle",
+  "featuredPosts": "featuredPosts",
+  "featured": "featured",
+  "minRead": "minRead",
+  "allPosts": "allPosts",
+  "posts": "posts"
+}

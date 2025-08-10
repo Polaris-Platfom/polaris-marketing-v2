@@ -1,0 +1,108 @@
+{
+  "blog": {
+    "categories": {
+      "Technology": "blog.categories.Technology",
+      "Community": "blog.categories.Community",
+      "Case Study": "blog.categories.Case Study",
+      "Technologie": "blog.categories.Technologie",
+      "Gemeinschaft": "blog.categories.Gemeinschaft",
+      "Finanzen": "blog.categories.Finanzen",
+      "Fallstudien": "blog.categories.Fallstudien",
+      "Zukunft": "blog.categories.Zukunft",
+      "Tutorials": "blog.categories.Tutorials"
+    }
+  },
+  "privacy": {
+    "principles": {
+      "transparency": {
+        "title": "privacy.principles.transparency.title",
+        "description": "privacy.principles.transparency.description"
+      },
+      "security": {
+        "title": "privacy.principles.security.title",
+        "description": "privacy.principles.security.description"
+      },
+      "control": {
+        "title": "privacy.principles.control.title",
+        "description": "privacy.principles.control.description"
+      },
+      "community": {
+        "title": "privacy.principles.community.title",
+        "description": "privacy.principles.community.description"
+      },
+      "title": "privacy.principles.title"
+    },
+    "basics": {
+      "personal": {
+        "title": "privacy.basics.personal.title",
+        "description": "privacy.basics.personal.description"
+      },
+      "activity": {
+        "title": "privacy.basics.activity.title",
+        "description": "privacy.basics.activity.description"
+      },
+      "technical": {
+        "title": "privacy.basics.technical.title",
+        "description": "privacy.basics.technical.description"
+      },
+      "title": "privacy.basics.title",
+      "description": "privacy.basics.description"
+    },
+    "usage": {
+      "platform": {
+        "title": "privacy.usage.platform.title",
+        "description": "privacy.usage.platform.description"
+      },
+      "communication": {
+        "title": "privacy.usage.communication.title",
+        "description": "privacy.usage.communication.description"
+      },
+      "improvement": {
+        "title": "privacy.usage.improvement.title",
+        "description": "privacy.usage.improvement.description"
+      },
+      "title": "privacy.usage.title",
+      "description": "privacy.usage.description"
+    },
+    "protection": {
+      "blockchain": {
+        "title": "privacy.protection.blockchain.title",
+        "description": "privacy.protection.blockchain.description"
+      },
+      "encryption": {
+        "title": "privacy.protection.encryption.title",
+        "description": "privacy.protection.encryption.description"
+      },
+      "compliance": {
+        "title": "privacy.protection.compliance.title",
+        "description": "privacy.protection.compliance.description"
+      },
+      "title": "privacy.protection.title",
+      "description": "privacy.protection.description"
+    },
+    "rights": {
+      "access": "privacy.rights.access",
+      "correct": "privacy.rights.correct",
+      "delete": "privacy.rights.delete",
+      "export": "privacy.rights.export",
+      "object": "privacy.rights.object",
+      "withdraw": "privacy.rights.withdraw",
+      "title": "privacy.rights.title",
+      "description": "privacy.rights.description"
+    },
+    "title": "privacy.title",
+    "subtitle": "privacy.subtitle",
+    "lastUpdated": "privacy.lastUpdated",
+    "welcomeTitle": "privacy.welcomeTitle",
+    "welcomeText": "privacy.welcomeText",
+    "contact": {
+      "title": "privacy.contact.title",
+      "description": "privacy.contact.description",
+      "contactButton": "privacy.contact.contactButton"
+    },
+    "updates": {
+      "title": "privacy.updates.title",
+      "description": "privacy.updates.description"
+    }
+  }
+}

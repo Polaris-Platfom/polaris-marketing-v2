@@ -1,0 +1,107 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 transition-colors duration-300;
+  }
+
+  /* Smooth theme transitions for all elements */
+  * {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Custom scrollbar - Sharp corners design */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+}
+
+@layer components {
+  /* Sharp corners design standard - no rounded corners */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-medium px-6 py-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:bg-accent-500 dark:hover:bg-accent-600 dark:focus:ring-accent-500;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-medium px-6 py-3 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:border-accent-500 dark:text-accent-500 dark:hover:bg-accent-500 dark:focus:ring-accent-500;
+  }
+
+  .btn-accent {
+    @apply bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 p-6;
+  }
+
+  .container-polaris {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  /* Improved text contrast for dark mode */
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+  
+  .text-subtle {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+  
+  /* Badge/Tag styles with better contrast */
+  .badge-primary {
+    @apply px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200;
+  }
+  
+  .badge-secondary {
+    @apply px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200;
+  }
+  
+  .badge-accent {
+    @apply px-2 py-1 text-xs font-medium bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-accent-200;
+  }
+  
+  /* Better contrast for links */
+  .link-primary {
+    @apply text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300;
+  }
+  
+  .link-accent {
+    @apply text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300;
+  }
+  
+  /* Input and form elements with better contrast */
+  .input-field {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-primary-500 dark:focus:border-accent-500 focus:ring-primary-500 dark:focus:ring-accent-500;
+  }
+  
+  /* Better contrast for blog category tags */
+  .blog-category-tag {
+    @apply px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-200;
+  }
+} 

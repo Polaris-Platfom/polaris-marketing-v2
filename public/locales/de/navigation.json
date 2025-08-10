@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "blog": "Blog", 
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "signUp": "Kostenlos registrieren",
+    "dashboard": "Dashboard",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "support": "Support",
+    "docs": "Dokumentation"
+  },
+  "footer": {
+    "about": "Über Polaris",
+    "team": "Team", 
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt",
+    "rights": "Alle Rechte vorbehalten.",
+    "quickLinks": "Schnelllinks",
+    "stayUpdated": "Bleiben Sie informiert",
+    "newsletterDescription": "Abonnieren Sie unseren Newsletter, um Updates zur Plattformentwicklung und Community-Neuigkeiten zu erhalten.",
+    "enterEmail": "E-Mail eingeben",
+    "subscribe": "Abonnieren",
+    "socialMedia": "Folgen Sie uns",
+    "company": "Unternehmen",
+    "product": "Produkt",
+    "legal": "Rechtliches",
+    "support": "Support",
+    "description": "Aufbau stärkerer Gemeinschaften durch demokratische Führung und finanzielle Transparenz. Schließen Sie sich Tausenden von Gemeinschaften an, die Polaris nutzen, um kollektive Entscheidungen zu treffen."
+  }
+} 

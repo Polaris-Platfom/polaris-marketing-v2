@@ -1,0 +1,155 @@
+{
+  "hero": {
+    "title": "Democracia que financia el cambio.",
+    "subtitle": "Donde las comunidades proponen, votan y financian proyectos colectivos.",
+    "description": "Gestiona múltiples comunidades desde un solo lugar. Blockchain transparente, decisiones democráticas.",
+    "ctaPrimary": "Únete a la Plataforma",
+    "ctaSecondary": "Conoce Más",
+    "watchDemo": "Ver Demo",
+    "getStarted": "Comenzar Gratis",
+    "stats": {
+      "communities": "Comunidades Creadas",
+      "fundsManaged": "Fondos Totales Gestionados",
+      "members": "Miembros Activos", 
+      "projects": "Proyectos Completados"
+    },
+    "trustedBy": "Con la confianza de más de 500 comunidades a nivel mundial",
+    "preview": {
+      "multiCommunity": "Multi-Comunidad",
+      "manageMultiple": "Gestionar Múltiples",
+      "democratic": "Democrático", 
+      "transparentVoting": "Votación Transparente",
+      "fundManagement": "Gestión de Fondos",
+      "secureTransparent": "Seguro y Transparente",
+      "analytics": "Analíticas",
+      "realTimeInsights": "Información en Tiempo Real",
+      "readyEmpower": "¿Listo para empoderar tu comunidad?",
+      "getStartedToday": "Comienza Hoy"
+    }
+  },
+  "featuresMain": {
+    "title": "Todo Lo Que Necesitas Para",
+    "subtitle": "Gobernanza Comunitaria",
+    "description": "Polaris proporciona una plataforma SaaS integral que empodera a las organizaciones para construir comunidades más fuertes y comprometidas a través de procesos democráticos y gestión transparente de fondos."
+  },
+  "features": {
+    "multiCommunity": {
+      "title": "Gestión Multi-Comunitaria",
+      "description": "Crea y gestiona múltiples comunidades desde un solo panel de control. Escala tu impacto a través de diferentes organizaciones."
+    },
+    "democraticVoting": {
+      "title": "Sistema de Votación Democrática",
+      "description": "La votación transparente y potenciada por blockchain asegura que cada voz cuente en las decisiones comunitarias."
+    },
+    "secureFund": {
+      "title": "Gestión Segura de Fondos",
+      "description": "Rastrea, asigna y distribuye fondos con total transparencia y seguridad."
+    },
+    "realTimeAnalytics": {
+      "title": "Analíticas en Tiempo Real",
+      "description": "Monitorea el compromiso comunitario, el progreso de financiamiento y las métricas de impacto en tiempo real."
+    },
+    "enterpriseSecurity": {
+      "title": "Seguridad Empresarial",
+      "description": "Seguridad de nivel bancario con inmutabilidad blockchain asegura la integridad y confianza de los datos."
+    },
+    "globalAccessibility": {
+      "title": "Accesibilidad Global",
+      "description": "El soporte para múltiples idiomas y monedas hace que la gobernanza comunitaria sea accesible a nivel mundial."
+    },
+    "automatedWorkflows": {
+      "title": "Flujos de Trabajo Automatizados",
+      "description": "Los contratos inteligentes automatizan la distribución de fondos y los procesos de gobernanza, reduciendo la carga administrativa."
+    },
+    "roleBasedPermissions": {
+      "title": "Permisos Basados en Roles",
+      "description": "El sistema granular de permisos permite diferentes niveles de acceso entre administradores y miembros de la comunidad."
+    }
+  },
+  "featuresCtaSection": {
+    "title": "¿Listo para Transformar Tu Comunidad?",
+    "description": "Únete a miles de organizaciones que ya usan Polaris para crear comunidades más comprometidas y democráticas.",
+    "startTrial": "Comenzar Prueba Gratuita",
+    "scheduleDemo": "Agendar Demo"
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona Polaris",
+    "description": "Descubre cómo Polaris transforma el compromiso comunitario a través de procesos democráticos transparentes impulsados por tecnología blockchain.",
+    "ctaText": "¿Listo para empezar a construir una mejor comunidad?",
+    "step1": {
+      "title": "Conecta y Verifica",
+      "description": "Regístrate y verifica tu identidad para participar en la gobernanza comunitaria"
+    },
+    "step2": {
+      "title": "Explora Propuestas",
+      "description": "Descubre proyectos comunitarios y propuestas de financiamiento que te importan"
+    },
+    "step3": {
+      "title": "Vota y Gana",
+      "description": "Emite tu voto y gana Polar Coins por participación activa"
+    },
+    "step4": {
+      "title": "Rastrea el Impacto",
+      "description": "Ve cómo tu participación impulsa cambios reales en la comunidad"
+    }
+  },
+  "valueProposition": {
+    "title": "¿Por Qué Elegir Polaris?",
+    "description": "Construido para organizaciones que quieren empoderar a sus comunidades con toma de decisiones democrática transparente y financiamiento colaborativo.",
+    "multiCommunity": {
+      "title": "Gestión Multi-Comunidad",
+      "description": "Gestiona comunidades ilimitadas desde un solo panel. Perfecto para organizaciones con múltiples proyectos o regiones."
+    },
+    "democraticGovernance": {
+      "title": "Gobernanza Democrática", 
+      "description": "Sistemas de votación integrados con reglas personalizables. Asegura que cada voz sea escuchada en tu proceso de toma de decisiones."
+    },
+    "collaborativeFunding": {
+      "title": "Financiamiento Colaborativo",
+      "description": "Crowdfunding impulsado por la comunidad con seguimiento transparente. Convierte ideas en realidad con apoyo colectivo."
+    },
+    "secureTransparent": {
+      "title": "Seguro y Transparente",
+      "description": "Transparencia impulsada por blockchain con seguridad de nivel empresarial. Cada transacción y voto es inmutable."
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Transformar Tu Comunidad?",
+    "description": "Únete a cientos de organizaciones que usan Polaris para construir comunidades más fuertes y democráticas.",
+    "startTrial": "Comenzar Prueba Gratuita",
+    "signIn": "Iniciar Sesión",
+    "disclaimer": "Sin tarjeta de crédito requerida • Prueba gratuita de 14 días • Cancela en cualquier momento"
+  },
+  "testimonials": {
+    "title": "Confiado por Comunidades en Todo el Mundo",
+    "testimonial1": {
+      "quote": "Polaris ha revolucionado cómo tomamos decisiones en nuestra cooperativa. La transparencia y facilidad de uso es increíble.",
+      "author": "María González",
+      "role": "Líder Comunitaria",
+      "community": "Cooperativa Valle Verde"
+    },
+    "testimonial2": {
+      "quote": "Gestionar múltiples asociaciones vecinales era caótico antes de Polaris. Ahora todo está organizado y es democrático.",
+      "author": "David Chen",
+      "role": "Coordinador Municipal",
+      "community": "Ciudad de Portland"
+    },
+    "testimonial3": {
+      "quote": "Las características de financiamiento nos ayudaron a recaudar $50k para nuestro jardín comunitario. El proceso fue transparente y atractivo.",
+      "author": "Sarah Williams",
+      "role": "Gerente de Proyecto", 
+      "community": "Red de Jardines Urbanos"
+    }
+  },
+  "survey": {
+    "title": "¡Ayúdanos a construir Polaris!",
+    "description": "Tu opinión es clave para crear la plataforma que las comunidades necesitan. Comparte tu experiencia y ayúdanos a mejorar.",
+    "buttonText": "Participar en la Encuesta",
+    "popupTitle": "Encuesta de Validación - Polaris Platform",
+    "popupDescription": "Con tu ayuda, estamos construyendo una plataforma para empoderar a las comunidades a través de la democracia digital y la gestión colectiva de recursos.",
+    "popupCta": "Completar Encuesta",
+    "popupClose": "Tal vez más tarde",
+    "thankYou": "¡Gracias por tu participación!",
+    "timeEstimate": "2-3 minutos"
+  }
+} 

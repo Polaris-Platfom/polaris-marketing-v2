@@ -1,0 +1,437 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "signUp": "Registro Gratuito",
+    "dashboard": "Panel"
+  },
+  "hero": {
+    "title": "Empodera Tu Comunidad",
+    "subtitle": "Plataforma de Financiamiento Democrático",
+    "description": "Vota propuestas, financia proyectos y da forma al futuro de tu comunidad con gobernanza blockchain transparente.",
+    "ctaPrimary": "Únete a la Plataforma",
+    "ctaSecondary": "Conoce Más"
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona Polaris",
+    "step1": {
+      "title": "Conecta y Verifica",
+      "description": "Regístrate y verifica tu identidad para participar en la gobernanza comunitaria"
+    },
+    "step2": {
+      "title": "Explora Propuestas",
+      "description": "Descubre proyectos comunitarios y propuestas de financiamiento que te importan"
+    },
+    "step3": {
+      "title": "Vota y Gana",
+      "description": "Emite tu voto y gana Polar Coins por participación activa"
+    },
+    "step4": {
+      "title": "Rastrea el Impacto",
+      "description": "Ve cómo tu participación impulsa cambios reales en la comunidad"
+    }
+  },
+  "footer": {
+    "about": "Acerca de Polaris",
+    "team": "Equipo",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contáctanos",
+    "rights": "Todos los derechos reservados."
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "subtitle": "En Polaris, creemos que los términos legales deben ser tan transparentes como nuestra tecnología. Aquí te explicamos de forma sencilla cómo funciona nuestra plataforma y cuáles son nuestros compromisos contigo.",
+    "jurisdiction": "Regido por la ley suiza",
+    "lastUpdated": "Última actualización",
+    "welcomeTitle": "¡Bienvenido a Polaris!",
+    "welcomeText": "Estás a punto de unirte a miles de personas que ya están construyendo el futuro de la democracia digital. Estos términos son tu guía para aprovechar al máximo nuestra plataforma.",
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "simplicity": {
+        "title": "Simplicidad",
+        "description": "Términos claros y comprensibles para todos"
+      },
+      "protection": {
+        "title": "Protección",
+        "description": "Tus datos y derechos están completamente protegidos"
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Construyendo un futuro más democrático juntos"
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Tecnología avanzada al servicio de las personas"
+      }
+    },
+    "basics": {
+      "title": "Lo Básico que Necesitas Saber",
+      "whatIs": "¿Qué es Polaris?",
+      "description": "Polaris es tu plataforma SaaS para crear y gestionar comunidades democráticas. Aquí puedes votar, proponer proyectos, manejar fondos y ver el impacto real de tus decisiones.",
+      "needsTitle": "Para usar Polaris necesitas:",
+      "age": "Ser mayor de 18 años",
+      "email": "Tener un email válido",
+      "respect": "Comprometerte con el respeto y la transparencia",
+      "rules": "Seguir las reglas de cada comunidad"
+    },
+    "account": {
+      "title": "Tu Cuenta y Participación",
+      "createTitle": "Crear tu cuenta es fácil y gratuito",
+      "createDescription": "Solo necesitas registrarte con tu email. Para participar en votaciones importantes o manejar fondos, te pediremos que verifiques tu identidad (es por seguridad).",
+      "canDoTitle": "Como miembro de Polaris puedes:",
+      "vote": "Votar en las decisiones de tu comunidad",
+      "propose": "Proponer proyectos innovadores",
+      "fund": "Participar en financiamiento colectivo",
+      "track": "Ver resultados transparentes en tiempo real",
+      "earn": "Ganar recompensas por tu participación activa"
+    },
+    "commitments": {
+      "title": "Nuestros Compromisos Contigo",
+      "security": {
+        "title": "Máxima Seguridad",
+        "description": "Tus datos están protegidos con tecnología blockchain y cifrado de nivel bancario."
+      },
+      "transparency": {
+        "title": "Transparencia Total",
+        "description": "Todos los votos y fondos son trazables. Sin sorpresas, sin secretos."
+      },
+      "innovation": {
+        "title": "Innovación Constante",
+        "description": "Mejoramos constantemente basándonos en tus comentarios y necesidades."
+      },
+      "support": {
+        "title": "Soporte Humano",
+        "description": "Nuestro equipo está aquí para ayudarte. Respuesta garantizada en 24 horas."
+      }
+    },
+    "rules": {
+      "title": "Reglas de Oro para una Comunidad Saludable",
+      "respectTitle": "Promovemos el respeto mutuo",
+      "respectDescription": "Polaris es un espacio seguro para todos. No toleramos discriminación, acoso o comportamientos que dañen la experiencia comunitaria.",
+      "celebrateTitle": "Comportamientos que celebramos:",
+      "constructive": "Participación constructiva y respetuosa",
+      "collaboration": "Colaboración para el bien común",
+      "communication": "Comunicación clara y honesta",
+      "beneficial": "Propuestas que benefician a la comunidad",
+      "notAllowTitle": "Comportamientos que no permitimos:",
+      "spam": "Spam o contenido irrelevante",
+      "discrimination": "Discriminación o acoso",
+      "manipulation": "Intentos de manipular votaciones",
+      "offensive": "Contenido ofensivo o malicioso"
+    },
+    "blockchain": {
+      "title": "Tecnología Blockchain: Simple pero Poderosa",
+      "whyTitle": "¿Por qué usamos blockchain?",
+      "whyDescription": "Porque garantiza que tus votos y transacciones de fondos sean inmutables y verificables por todos. Es como tener un notario digital que nunca miente.",
+      "meansTitle": "Esto significa que:",
+      "votesRecorded": "Tus votos quedan registrados permanentemente",
+      "fundsTracked": "Los fondos se rastrean con total transparencia",
+      "decisionsImmutable": "Las decisiones no se pueden alterar después",
+      "verifiable": "Cualquiera puede verificar los resultados"
+    },
+    "legal": {
+      "title": "Aspectos Legales (Sin Complicaciones)",
+      "jurisdictionTitle": "Jurisdicción: Suiza",
+      "jurisdictionDescription": "Polaris se rige por la ley suiza, conocida por su estabilidad y protección de datos. Esto te da la máxima seguridad legal.",
+      "protectionTitle": "Protección de datos nivel suizo:",
+      "gdpr": "Cumplimos con GDPR y normativas suizas",
+      "protected": "Tus datos personales están ultra-protegidos",
+      "access": "Puedes acceder, corregir o eliminar tu información",
+      "disputes": "Resolución de disputas justa y transparente"
+    },
+    "support": {
+      "title": "Siempre Estamos Aquí para Ti",
+      "description": "¿Tienes preguntas sobre nuestra plataforma o necesitas ayuda? Estamos aquí para ayudarte a sacar el máximo provecho de tu experiencia con Polaris.",
+      "contactButton": "Contáctanos"
+    },
+    "updates": {
+      "title": "Cambios y Actualizaciones",
+      "description": "Cuando actualicemos estos términos (siempre para mejorar), te avisaremos con 30 días de antelación por email y en la plataforma. Nunca haremos cambios sorpresa que afecten tus derechos."
+    },
+    "future": {
+      "title": "¡Construyamos el Futuro Juntos!",
+      "description": "Estos términos no son solo legalidad, son nuestro compromiso para crear la mejor experiencia democrática digital del mundo.",
+      "transparency": "Hecho con transparencia",
+      "protection": "Protegido por la ley suiza",
+      "community": "Diseñado para comunidades",
+      "questions": "¿Tienes preguntas sobre estos términos? Escríbenos a legal@polaris-platform.com"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "subtitle": "Tu privacidad es fundamental en todo lo que hacemos. Así es como protegemos tus datos mientras construimos comunidades transparentes y democráticas.",
+    "lastUpdated": "Última actualización",
+    "welcomeTitle": "Privacidad por Diseño",
+    "welcomeText": "En Polaris, la privacidad no es una idea tardía—está integrada en cada característica. Creemos que puedes tener transparencia y privacidad trabajando juntas.",
+    "principles": {
+      "title": "Nuestros Principios de Privacidad",
+      "transparency": {
+        "title": "Transparencia Radical",
+        "description": "Explicamos claramente qué datos recopilamos, cómo los usamos y por qué los necesitamos."
+      },
+      "security": {
+        "title": "Seguridad Bancaria",
+        "description": "Tus datos están protegidos con cifrado empresarial y tecnología blockchain."
+      },
+      "control": {
+        "title": "Tus Datos, Tu Control",
+        "description": "Tienes control completo sobre tus datos y puedes solicitar su eliminación en cualquier momento."
+      },
+      "community": {
+        "title": "Privacidad Comunitaria",
+        "description": "Respetamos la privacidad de las decisiones comunitarias mientras mantenemos la transparencia necesaria."
+      }
+    },
+    "basics": {
+      "title": "Qué Recopilamos (Y Por Qué)",
+      "description": "Solo recopilamos lo necesario para brindarte la mejor experiencia de participación democrática.",
+      "personal": {
+        "title": "Información Personal",
+        "description": "Tu información básica de perfil para verificar identidad y permitir participación comunitaria."
+      },
+      "activity": {
+        "title": "Actividad de Plataforma",
+        "description": "Tu historial de votación e interacciones comunitarias para garantizar la integridad de la plataforma."
+      },
+      "technical": {
+        "title": "Datos Técnicos",
+        "description": "Análisis de uso para mejorar el rendimiento de la plataforma y la experiencia del usuario."
+      }
+    },
+    "usage": {
+      "title": "Cómo Usamos Tus Datos",
+      "description": "Cada pieza de datos tiene un propósito que te beneficia a ti y a tu comunidad.",
+      "platform": {
+        "title": "Funcionalidad de la Plataforma",
+        "description": "Para proporcionar herramientas de gobernanza democrática seguras y confiables para tu comunidad."
+      },
+      "communication": {
+        "title": "Comunicación Inteligente",
+        "description": "Para enviar solo actualizaciones relevantes sobre votos, propuestas y mejoras de la plataforma."
+      },
+      "improvement": {
+        "title": "Mejora Continua",
+        "description": "Para hacer la plataforma mejor basándose en cómo las comunidades reales la usan."
+      }
+    },
+    "protection": {
+      "title": "Protección de Tus Datos",
+      "description": "Usamos tecnología de vanguardia para mantener tu información segura y privada.",
+      "blockchain": {
+        "title": "Seguridad Blockchain",
+        "description": "Registros inmutables con protección de privacidad donde más importa."
+      },
+      "encryption": {
+        "title": "Cifrado Empresarial",
+        "description": "Seguridad de nivel bancario para toda tu información sensible."
+      },
+      "compliance": {
+        "title": "Cumplimiento Suizo",
+        "description": "Cumpliendo con los más altos estándares internacionales de protección de datos."
+      }
+    },
+    "rights": {
+      "title": "Tus Derechos y Control",
+      "description": "Tienes control completo sobre tus datos. Esto es lo que puedes hacer:",
+      "access": "Acceder a todos tus datos en cualquier momento",
+      "correct": "Corregir cualquier información inexacta",
+      "delete": "Eliminar tus datos permanentemente",
+      "export": "Exportar tus datos en formatos estándar",
+      "object": "Objetar cierto procesamiento de datos",
+      "withdraw": "Retirar consentimiento en cualquier momento"
+    },
+    "contact": {
+      "title": "¿Preguntas sobre Privacidad?",
+      "description": "Nuestro equipo de privacidad está aquí para ayudarte a entender exactamente cómo protegemos tus datos.",
+      "contactButton": "Contactar Equipo de Privacidad"
+    },
+    "updates": {
+      "title": "Actualizaciones de Política",
+      "description": "Te notificaremos 30 días antes de cualquier cambio significativo en esta política. Tu privacidad importa demasiado para sorpresas."
+    }
+  },
+  "about": {
+    "title": "Construyendo el Futuro de",
+    "subtitle": "la Gobernanza Comunitaria",
+    "description": "Polaris Platform nació de la creencia de que cada comunidad merece una voz en dar forma a su futuro. Estamos creando herramientas que hacen la participación democrática accesible, transparente e impactante.",
+    "mission": "Nuestra Misión",
+    "missionText": "Visualizamos un mundo donde las comunidades tengan las herramientas y recursos para resolver sus propios desafíos a través de la toma de decisiones colaborativa y mecanismos de financiamiento transparentes.",
+    "impactTitle": "Nuestro Impacto Hasta Ahora",
+    "values": "Nuestros Valores",
+    "valuesDescription": "Estos principios fundamentales guían todo lo que hacemos y dan forma a cómo construimos tecnología para las comunidades.",
+    "team": "Conoce Nuestro Equipo",
+    "teamDescription": "Somos un grupo diverso de tecnólogos, organizadores comunitarios y expertos en participación cívica unidos por una visión compartida de empoderamiento democrático.",
+    "communityFirst": "Comunidad Primero",
+    "communityFirstDesc": "Creemos en el poder de la toma de decisiones colectiva y las iniciativas impulsadas por la comunidad.",
+    "transparency": "Transparencia",
+    "transparencyDesc": "Cada voto, cada asignación de fondos y cada decisión se registra en la blockchain para total transparencia.",
+    "socialImpact": "Impacto Social",
+    "socialImpactDesc": "Nuestra plataforma está diseñada para crear cambios significativos y duraderos en comunidades de todo el mundo.",
+    "globalReach": "Alcance Global",
+    "globalReachDesc": "Conectando comunidades a través de fronteras para compartir recursos, ideas y mejores prácticas.",
+    "blockchainText": "Por medio de la tecnología blockchain, aseguramos que cada voz sea escuchada, cada voto cuente, y cada peso sea rastreado desde la propuesta hasta la implementación.",
+    "communitiesServed": "Comunidades Servidas",
+    "fundsAllocated": "Fondos Asignados",
+    "activeParticipants": "Participantes Activos",
+    "projectsCompleted": "Proyectos Completados",
+    "joinOurTeam": "Únete a Nuestro Equipo",
+    "openPositions": "Posiciones Abiertas",
+    "applyNow": "Aplicar Ahora",
+    "positions": {
+      "ceo": {
+        "title": "CEO & Co-Fundador",
+        "description": "Buscamos un líder con visión de empoderamiento ciudadano, experiencia en liderazgo tecnológico y capacidad para inspirar y liderar nuestro proyecto hacia su impacto global.",
+        "requirements": "• 5+ años de experiencia en liderazgo en tecnología o participación cívica\n• Habilidades sólidas de storytelling y recaudación de fondos\n• Experiencia en visión y estrategia de producto\n• Pasión por el empoderamiento democrático y la construcción de comunidades",
+        "benefits": "• Participación en el capital de una empresa con propósito\n• Salario competitivo y beneficios\n• Oportunidad de dar forma al futuro de la gobernanza comunitaria\n• Trabajar con un equipo diverso y apasionado",
+        "responsibilities": "• Definir y ejecutar la visión y estrategia de la empresa\n• Liderar esfuerzos de recaudación de fondos y relaciones con inversores\n• Construir alianzas con comunidades y organizaciones\n• Representar a Polaris Platform en conferencias y eventos"
+      },
+      "community": {
+        "title": "Jefe de Comunidad",
+        "description": "Responsable de construir y dinamizar la comunidad, ejecutar estrategias de crecimiento, moderar foros, y educar en democracia digital.",
+        "requirements": "• 3+ años de experiencia en gestión de comunidades\n• Comprensión profunda de la participación cívica y procesos democráticos\n• Habilidades sólidas de comunicación y moderación\n• Experiencia con redes sociales y plataformas comunitarias",
+        "benefits": "• Salario competitivo y participación en el capital\n• Oportunidad de construir comunidades a nivel mundial\n• Presupuesto para desarrollo profesional\n• Ambiente de trabajo remoto",
+        "responsibilities": "• Desarrollar y ejecutar estrategias de crecimiento comunitario\n• Moderar discusiones y foros comunitarios\n• Crear contenido educativo sobre democracia digital\n• Organizar eventos y talleres comunitarios"
+      },
+      "product": {
+        "title": "Jefe de Producto",
+        "description": "Diseñador/a de producto con experiencia en SaaS, que pueda construir flujos inclusivos y atractivos para nuestra plataforma de gobernanza democrática.",
+        "requirements": "• 4+ años de experiencia en diseño de producto\n• Experiencia con productos SaaS e investigación de usuarios\n• Habilidades sólidas de UX/UI y portafolio\n• Comprensión de accesibilidad y diseño inclusivo",
+        "benefits": "• Salario competitivo y participación en el capital\n• Herramientas y equipo de diseño de última generación\n• Oportunidad de impactar procesos democráticos\n• Equipo colaborativo y enfocado en el diseño",
+        "responsibilities": "• Liderar el diseño de producto y la experiencia de usuario\n• Realizar investigación de usuarios y pruebas de usabilidad\n• Crear sistemas de diseño inclusivos\n• Colaborar con ingeniería en el desarrollo de productos"
+      },
+      "marketing": {
+        "title": "Líder de Crecimiento y Marketing",
+        "description": "Planificar y ejecutar campañas de marketing y estrategias de redes sociales, gestionar contenido y crecimiento de usuarios.",
+        "requirements": "• 3+ años de experiencia en marketing, preferiblemente en tecnología\n• Habilidades sólidas en redes sociales y creación de contenido\n• Experiencia con growth hacking y adquisición de usuarios\n• Comprensión de sectores de tecnología cívica o impacto social",
+        "benefits": "• Salario competitivo y participación en el capital\n• Presupuesto y herramientas de marketing\n• Oportunidad de promover valores democráticos\n• Libertad creativa y autonomía",
+        "responsibilities": "• Desarrollar y ejecutar estrategias de marketing\n• Gestionar presencia en redes sociales y contenido\n• Crear materiales de marketing convincentes\n• Impulsar métricas de adquisición de usuarios y crecimiento"
+      }
+    }
+  },
+  "proposals": {
+    "title": "Propuestas Comunitarias",
+    "description": "Descubre, vota y financia proyectos que importan a tu comunidad",
+    "createProposal": "Crear Propuesta",
+    "searchPlaceholder": "Buscar propuestas...",
+    "allCategories": "Todas las Categorías",
+    "allStatus": "Todos los Estados",
+    "noResults": "No se encontraron propuestas que coincidan con tus criterios.",
+    "fundingProgress": "Progreso de Financiamiento",
+    "funded": "financiado",
+    "votes": "votos",
+    "voting": "Votación",
+    "completed": "Completado",
+    "rejected": "Rechazado"
+  },
+  "wallet": {
+    "title": "Mi Billetera",
+    "description": "Gestiona tus Polar Coins y rastrea tu participación comunitaria",
+    "balance": "Saldo de Polar Coin",
+    "currency": "Tu moneda comunitaria",
+    "totalEarned": "Total Ganado",
+    "totalSpent": "Total Gastado",
+    "pendingRewards": "Recompensas Pendientes",
+    "walletAddress": "Dirección de Billetera",
+    "overview": "Resumen",
+    "transactions": "Transacciones",
+    "rewards": "Recompensas",
+    "recentTransactions": "Transacciones Recientes",
+    "achievementRewards": "Recompensas de Logros",
+    "quickActions": "Acciones Rápidas",
+    "earningOpportunities": "Oportunidades de Ganancia"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "¡Éxito!",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "readyToStart": "¿Listo para comenzar a hacer una diferencia en tu comunidad?",
+    "getStarted": "Comienza Hoy",
+    "quickLinks": "Enlaces Rápidos",
+    "stayUpdated": "Mantente Actualizado",
+    "newsletterDescription": "Suscríbete a nuestro boletín para recibir actualizaciones sobre el desarrollo de la plataforma y noticias de la comunidad.",
+    "subscribe": "Suscribirse",
+    "enterEmail": "Ingresa tu correo",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "communityDashboard": "Panel Comunitario",
+    "parkRenovation": "Proyecto de Renovación del Parque",
+    "percentFunded": "% Financiado",
+    "communityCenter": "Actualización del Centro Comunitario",
+    "votingOpen": "Votación Abierta",
+    "businessSupport": "Apoyo a Negocios Locales",
+    "newProposal": "Nueva Propuesta",
+    "yourPolarCoins": "Tus Polar Coins",
+    "getInTouch": "Ponte en Contacto",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "sendMessage": "Enviar Mensaje",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "emailAddress": "Correo Electrónico",
+    "subject": "Asunto",
+    "yourMessage": "Tu Mensaje",
+    "sendMessageBtn": "Enviar Mensaje",
+    "contactDescription": "Nos encantaría saber de ti. Envíanos un mensaje y responderemos lo antes posible."
+  },
+  "blog": {
+    "title": "Blog y Noticias",
+    "description": "Mantente actualizado con las últimas perspectivas, historias y desarrollos del mundo de la gobernanza comunitaria.",
+    "readMore": "Leer Más",
+    "loadMore": "Cargar Más Artículos",
+    "categories": {
+      "Technology": "Tecnología",
+      "Community": "Comunidad", 
+      "Case Study": "Caso de Estudio"
+    },
+    "readTime": {
+      "template": "{{minutes}} min de lectura"
+    }
+  },
+  "stats": {
+    "pageTitle": "Estadísticas de la Plataforma - Polaris Platform",
+    "pageDescription": "Estadísticas en tiempo real y panel de transparencia para la gobernanza comunitaria de Polaris Platform",
+    "hero": {
+      "title": "Estadísticas de la Plataforma",
+      "subtitle": "Transparencia en Tiempo Real",
+      "description": "Todos los datos de la plataforma se actualizan en tiempo real y son públicamente verificables. Vea cómo las comunidades están creciendo, cómo se gestionan los fondos y cómo se toman las decisiones democráticas.",
+      "liveData": "Datos en Vivo",
+      "updatedEvery30s": "Actualizado cada 30s",
+      "transparent": "Transparente"
+    },
+    "transparency": {
+      "title": "Por qué la Transparencia es Importante",
+      "subtitle": "Construyendo confianza a través de datos abiertos y métricas verificables",
+      "communityTrust": {
+        "title": "Confianza Comunitaria",
+        "description": "Las estadísticas en tiempo real generan confianza al mostrar la actividad comunitaria real, la participación de miembros y la asignación de fondos en completa transparencia."
+      },
+      "dataIntegrity": {
+        "title": "Integridad de Datos",
+        "description": "Todas las métricas de la plataforma son verificables y provienen de transacciones blockchain reales e interacciones comunitarias, asegurando precisión y responsabilidad."
+      },
+      "realTimeUpdates": {
+        "title": "Actualizaciones en Tiempo Real",
+        "description": "Las estadísticas se actualizan automáticamente cada 30 segundos, proporcionando información en vivo sobre la actividad comunitaria y la salud de la plataforma sin intervención manual."
+      },
+      "growthTracking": {
+        "title": "Seguimiento de Crecimiento",
+        "description": "Rastree las tendencias de crecimiento de la plataforma, métricas de participación comunitaria y patrones de asignación de fondos para tomar decisiones informadas sobre el desarrollo de la plataforma."
+      }
+    }
+  }
+} 

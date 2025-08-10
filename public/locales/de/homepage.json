@@ -1,0 +1,353 @@
+{
+  "hero": {
+    "title": "🚀 Demokratie, die Veränderung finanziert.",
+    "subtitle": "Wo Gemeinschaften vorschlagen, abstimmen und kollektive Projekte finanzieren.",
+    "description": "Verwalten Sie mehrere Gemeinschaften von einem Ort aus. Transparente Blockchain, demokratische Entscheidungen.",
+    "ctaPrimary": "Der Plattform beitreten",
+    "ctaSecondary": "Mehr erfahren",
+    "watchDemo": "Demo ansehen",
+    "getStarted": "Kostenlos starten",
+    "stats": {
+      "communities": "Gemeinschaften erstellt",
+      "fundsManaged": "Gesamtverwaltete Mittel", 
+      "members": "Aktive Mitglieder",
+      "projects": "Abgeschlossene Projekte"
+    },
+    "trustedBy": "Vertraut von 500+ Gemeinschaften weltweit",
+    "preview": {
+      "multiCommunity": "Multi-Gemeinschaft",
+      "manageMultiple": "Mehrere verwalten",
+      "democratic": "Demokratisch", 
+      "transparentVoting": "Transparente Abstimmung",
+      "fundManagement": "Mittelverwaltung",
+      "secureTransparent": "Sicher & Transparent",
+      "analytics": "Analysen",
+      "realTimeInsights": "Echtzeiteinblicke",
+      "readyEmpower": "Bereit, Ihre Gemeinschaft zu stärken?",
+      "getStartedToday": "Heute starten"
+    }
+  },
+  "featuresMain": {
+    "title": "Alles was Sie brauchen für",
+    "subtitle": "Gemeinschaftsführung",
+    "description": "Polaris bietet eine umfassende SaaS-Plattform, die Organisationen dabei unterstützt, stärkere, engagiertere Gemeinschaften durch demokratische Prozesse und transparente Mittelverwaltung aufzubauen."
+  },
+  "features": {
+    "multiCommunity": {
+      "title": "Multi-Gemeinschafts-Management",
+      "description": "Erstellen und verwalten Sie mehrere Gemeinschaften von einem Dashboard aus. Skalieren Sie Ihren Einfluss über verschiedene Organisationen hinweg."
+    },
+    "democraticVoting": {
+      "title": "Demokratisches Abstimmungssystem",
+      "description": "Transparente, blockchain-basierte Abstimmungen stellen sicher, dass jede Stimme bei Gemeinschaftsentscheidungen zählt."
+    },
+    "secureFund": {
+      "title": "Sichere Mittelverwaltung",
+      "description": "Verfolgen, zuweisen und verteilen Sie Mittel mit vollständiger Transparenz und Sicherheit."
+    },
+    "realTimeAnalytics": {
+      "title": "Echtzeitanalysen",
+      "description": "Überwachen Sie Gemeinschaftsengagement, Finanzierungsfortschritte und Wirkungsmetriken in Echtzeit."
+    },
+    "proposalSystem": {
+      "title": "Vorschlagssystem",
+      "description": "Gemeinschaftsmitglieder können Projekte vorschlagen und abstimmen, was finanziert werden soll."
+    },
+    "transparentGovernance": {
+      "title": "Transparente Führung",
+      "description": "Alle Entscheidungen und Transaktionen sind auf der Blockchain nachverfolgbar und überprüfbar."
+    },
+    "enterpriseSecurity": {
+      "title": "Unternehmenssicherheit",
+      "description": "Sicherheit auf Bankniveau mit Blockchain-Unveränderlichkeit gewährleistet Datenintegrität und Vertrauen."
+    },
+    "globalAccessibility": {
+      "title": "Globale Zugänglichkeit",
+      "description": "Unterstützung für mehrere Sprachen und Währungen macht Gemeinschaftsführung weltweit zugänglich."
+    },
+    "automatedWorkflows": {
+      "title": "Automatisierte Arbeitsabläufe",
+      "description": "Smart Contracts automatisieren Mittelverteilung und Governance-Prozesse und reduzieren Verwaltungsaufwand."
+    },
+    "roleBasedPermissions": {
+      "title": "Rollenbasierte Berechtigungen",
+      "description": "Granulares Berechtigungssystem ermöglicht verschiedene Zugriffsebenen für Gemeinschaftsadministratoren und Mitglieder."
+    }
+  },
+  "featuresCtaSection": {
+    "title": "Bereit, Ihre Gemeinschaft zu transformieren?",
+    "description": "Schließen Sie sich Tausenden von Organisationen an, die bereits Polaris nutzen, um engagiertere, demokratischere Gemeinschaften zu schaffen.",
+    "startTrial": "Kostenlose Testversion starten",
+    "scheduleDemo": "Demo vereinbaren"
+  },
+  "howItWorks": {
+    "title": "Wie Polaris funktioniert",
+    "subtitle": "Einfach, transparent und demokratisch",
+    "description": "Entdecken Sie, wie Polaris das Gemeinschaftsengagement durch transparente, demokratische Prozesse mit Blockchain-Technologie transformiert.",
+    "ctaText": "Bereit, eine bessere Gemeinschaft aufzubauen?",
+    "steps": {
+      "connect": {
+        "title": "Verbinden & Verifizieren",
+        "description": "Registrieren Sie sich und verifizieren Sie Ihre Identität, um an der Gemeinschaftsführung teilzunehmen",
+        "details": "Sicherer Anmeldeprozess mit Identitätsverifizierung"
+      },
+      "browse": {
+        "title": "Vorschläge durchsuchen",
+        "description": "Erkunden Sie Gemeinschaftsprojekte und Finanzierungsvorschläge, die Ihnen wichtig sind",
+        "details": "Filtere nach Kategorie, Finanzierungsbetrag und Gemeinschaftsauswirkung"
+      },
+      "vote": {
+        "title": "Abstimmen & Verdienen",
+        "description": "Geben Sie Ihre Stimme ab und verdienen Sie Polar Coins für aktive Teilnahme",
+        "details": "Belohnungen für engagierte Gemeinschaftsmitglieder"
+      },
+      "track": {
+        "title": "Auswirkungen verfolgen",
+        "description": "Sehen Sie, wie Ihre Teilnahme echte Gemeinschaftsveränderungen vorantreibt",
+        "details": "Detaillierte Berichte über Projektfortschritte und Mittelverwendung"
+      }
+    },
+    "step1": {
+      "title": "Verbinden & Verifizieren",
+      "description": "Registrieren Sie sich und verifizieren Sie Ihre Identität, um an der Gemeinschaftsführung teilzunehmen"
+    },
+    "step2": {
+      "title": "Vorschläge durchsuchen", 
+      "description": "Erkunden Sie Gemeinschaftsprojekte und Finanzierungsvorschläge, die Ihnen wichtig sind"
+    },
+    "step3": {
+      "title": "Abstimmen & Verdienen",
+      "description": "Geben Sie Ihre Stimme ab und verdienen Sie Polar Coins für aktive Teilnahme"
+    },
+    "step4": {
+      "title": "Auswirkungen verfolgen",
+      "description": "Sehen Sie, wie Ihre Teilnahme echte Gemeinschaftsveränderungen vorantreibt"
+    }
+  },
+  "valueProposition": {
+    "title": "Warum Polaris wählen?",
+    "description": "Entwickelt für Organisationen, die ihre Gemeinschaften durch transparente, demokratische Entscheidungsfindung und kollaborative Finanzierung stärken möchten.",
+    "multiCommunity": {
+      "title": "Multi-Gemeinschafts-Management",
+      "description": "Verwalten Sie unbegrenzte Gemeinschaften von einem einzigen Dashboard aus. Perfekt für Organisationen mit mehreren Projekten oder Regionen."
+    },
+    "democraticGovernance": {
+      "title": "Demokratische Führung", 
+      "description": "Integrierte Abstimmungssysteme mit anpassbaren Regeln. Stellen Sie sicher, dass jede Stimme in Ihrem Entscheidungsprozess gehört wird."
+    },
+    "collaborativeFunding": {
+      "title": "Kollaborative Finanzierung",
+      "description": "Gemeinschaftsgetriebenes Crowdfunding mit transparenter Nachverfolgung. Verwandeln Sie Ideen mit kollektiver Unterstützung in Realität."
+    },
+    "secureTransparent": {
+      "title": "Sicher & Transparent",
+      "description": "Blockchain-basierte Transparenz mit Sicherheit auf Unternehmensniveau. Jede Transaktion und jede Stimme ist unveränderlich."
+    }
+  },
+  "benefits": {
+    "title": "Warum Polaris wählen?",
+    "subtitle": "Vorteile für Gemeinschaften und Organisationen",
+    "items": {
+      "democracy": {
+        "title": "Echte Demokratie",
+        "description": "Jede Stimme zählt bei wichtigen Entscheidungen"
+      },
+      "transparency": {
+        "title": "Vollständige Transparenz",
+        "description": "Alle Transaktionen und Entscheidungen sind öffentlich nachverfolgbar"
+      },
+      "efficiency": {
+        "title": "Effiziente Verwaltung",
+        "description": "Automatisierte Prozesse reduzieren Verwaltungsaufwand"
+      },
+      "security": {
+        "title": "Blockchain-Sicherheit",
+        "description": "Unveränderliche Aufzeichnungen und sichere Transaktionen"
+      },
+      "scalability": {
+        "title": "Skalierbarkeit",
+        "description": "Wächst mit Ihrer Gemeinschaft und Ihren Bedürfnissen"
+      },
+      "engagement": {
+        "title": "Erhöhtes Engagement",
+        "description": "Mitglieder sind motivierter, wenn sie echte Entscheidungsmacht haben"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Vertraut von Gemeinschaften weltweit",
+    "subtitle": "Erfahrungen von echten Nutzern",
+    "testimonial1": {
+      "quote": "Polaris hat revolutioniert, wie wir Entscheidungen in unserer Genossenschaft treffen. Die Transparenz und Benutzerfreundlichkeit ist unglaublich.",
+      "author": "Maria González",
+      "role": "Gemeinschaftsleiterin",
+      "community": "Green Valley Genossenschaft"
+    },
+    "testimonial2": {
+      "quote": "Die Verwaltung mehrerer Nachbarschaftsvereine war vor Polaris chaotisch. Jetzt ist alles organisiert und demokratisch.",
+      "author": "David Chen",
+      "role": "Kommunaler Koordinator",
+      "community": "Stadt Portland"
+    },
+    "testimonial3": {
+      "quote": "Die Finanzierungsfunktionen halfen uns, 50.000 € für unseren Gemeinschaftsgarten zu sammeln. Der Prozess war transparent und engagierend.",
+      "author": "Sarah Williams",
+      "role": "Projektmanagerin", 
+      "community": "Urbane Gärten Netzwerk"
+    },
+    "items": {
+      "community1": {
+        "name": "Maria Schmidt",
+        "role": "Gemeinschaftsleiterin",
+        "organization": "Nachhaltige Stadt Berlin",
+        "content": "Polaris hat unsere Art der Entscheidungsfindung revolutioniert. Die Transparenz und einfache Bedienung haben das Vertrauen in unserer Gemeinschaft erheblich gestärkt.",
+        "rating": 5
+      },
+      "community2": {
+        "name": "Thomas Müller",
+        "role": "Projektkoordinator",
+        "organization": "Lokale Kunstinitiative",
+        "content": "Die Mittelverwaltung ist so viel einfacher geworden. Wir können jetzt mehr Projekte finanzieren und dabei vollständige Transparenz gewährleisten.",
+        "rating": 5
+      },
+      "community3": {
+        "name": "Anna Weber",
+        "role": "Aktivistin",
+        "organization": "Umweltschutzgruppe",
+        "content": "Endlich eine Plattform, die echte demokratische Teilhabe ermöglicht. Unsere Mitglieder sind viel engagierter seit wir Polaris nutzen.",
+        "rating": 5
+      }
+    }
+  },
+  "stats": {
+    "title": "Polaris in Zahlen",
+    "subtitle": "Wachsende Gemeinschaft, wachsende Auswirkung",
+    "items": {
+      "communities": {
+        "value": "500+",
+        "label": "Aktive Gemeinschaften"
+      },
+      "funds": {
+        "value": "€2.5M",
+        "label": "Verwaltete Mittel"
+      },
+      "members": {
+        "value": "15K+",
+        "label": "Registrierte Mitglieder"
+      },
+      "projects": {
+        "value": "1,200+",
+        "label": "Finanzierte Projekte"
+      },
+      "votes": {
+        "value": "50K+",
+        "label": "Abgegebene Stimmen"
+      },
+      "countries": {
+        "value": "25",
+        "label": "Länder"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Preisgestaltung",
+    "subtitle": "Wählen Sie den Plan, der zu Ihrer Gemeinschaft passt",
+    "plans": {
+      "basic": {
+        "name": "Basis",
+        "price": "Kostenlos",
+        "description": "Perfekt für kleine Gemeinschaften",
+        "features": [
+          "Bis zu 100 Mitglieder",
+          "Grundlegende Abstimmungsfeatures",
+          "Community-Support",
+          "Basis-Analysen"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€29/Monat",
+        "description": "Für wachsende Gemeinschaften",
+        "features": [
+          "Bis zu 1,000 Mitglieder",
+          "Erweiterte Abstimmungsoptionen",
+          "Prioritätssupport",
+          "Detaillierte Analysen",
+          "Anpassbare Dashboards"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Individuelle Preise",
+        "description": "Für große Organisationen",
+        "features": [
+          "Unbegrenzte Mitglieder",
+          "Vollständige Anpassung",
+          "Dedicated Support",
+          "Erweiterte Integrationen",
+          "On-Premise-Bereitstellung"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Bereit, Ihre Gemeinschaft zu transformieren?",
+    "subtitle": "Schließen Sie sich Tausenden von Gemeinschaften an, die bereits Polaris nutzen",
+    "description": "Schließen Sie sich hunderten von Organisationen an, die Polaris nutzen, um stärkere, demokratischere Gemeinschaften aufzubauen.",
+    "primaryButton": "Kostenlos starten",
+    "secondaryButton": "Demo anfordern",
+    "startTrial": "Kostenlose Testversion starten",
+    "signIn": "Anmelden",
+    "disclaimer": "Keine Kreditkarte erforderlich • 14-tägige kostenlose Testversion • Jederzeit kündbar",
+    "features": [
+      "Kostenlose Registrierung",
+      "Keine Kreditkarte erforderlich",
+      "Vollständige Funktionen im kostenlosen Plan",
+      "24/7 Community-Support"
+    ]
+  },
+  "survey": {
+    "title": "Helfen Sie uns, Polaris zu entwickeln!",
+    "description": "Ihre Meinung ist der Schlüssel zur Entwicklung der Plattform, die Gemeinschaften benötigen. Teilen Sie Ihre Erfahrungen mit und helfen Sie uns bei der Verbesserung.",
+    "buttonText": "An der Umfrage teilnehmen",
+    "popupTitle": "Validierungsumfrage - Polaris Platform",
+    "popupDescription": "Mit Ihrer Hilfe entwickeln wir eine Plattform zur Stärkung von Gemeinschaften durch digitale Demokratie und kollektive Ressourcenverwaltung.",
+    "popupCta": "Umfrage ausfüllen",
+    "popupClose": "Vielleicht später",
+    "thankYou": "Vielen Dank für Ihre Teilnahme!",
+    "timeEstimate": "2-3 Minuten"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles was Sie über Polaris wissen müssen",
+    "items": {
+      "what": {
+        "question": "Was ist Polaris?",
+        "answer": "Polaris ist eine SaaS-Plattform für demokratische Gemeinschaftsführung. Sie ermöglicht es Organisationen, Entscheidungen transparent zu treffen, Mittel zu verwalten und das Engagement der Mitglieder zu erhöhen."
+      },
+      "how": {
+        "question": "Wie funktioniert das Abstimmungssystem?",
+        "answer": "Unser Abstimmungssystem basiert auf Blockchain-Technologie, die Transparenz und Sicherheit gewährleistet. Jede Stimme wird unveränderlich aufgezeichnet und kann von allen Mitgliedern überprüft werden."
+      },
+      "cost": {
+        "question": "Was kostet Polaris?",
+        "answer": "Wir bieten einen kostenlosen Plan für kleine Gemeinschaften mit bis zu 100 Mitgliedern. Für größere Gemeinschaften haben wir erschwingliche Pro- und Enterprise-Pläne."
+      },
+      "security": {
+        "question": "Ist Polaris sicher?",
+        "answer": "Ja, Sicherheit ist unsere Priorität. Wir verwenden Blockchain-Technologie, End-to-End-Verschlüsselung und folgen den neuesten Sicherheitsstandards der Branche."
+      },
+      "support": {
+        "question": "Welchen Support bieten Sie?",
+        "answer": "Wir bieten 24/7 Community-Support für alle Nutzer, Prioritätssupport für Pro-Kunden und dedicated Support für Enterprise-Kunden."
+      },
+      "integration": {
+        "question": "Kann Polaris in bestehende Systeme integriert werden?",
+        "answer": "Ja, wir bieten APIs und Integrationen mit den beliebtesten Tools und Plattformen. Für Enterprise-Kunden bieten wir auch maßgeschneiderte Integrationslösungen."
+      }
+    }
+  },
+  "footer": {
+    "description": "Polaris stärkt Gemeinschaften durch transparente, demokratische Entscheidungsfindung und sichere Mittelverwaltung."
+  }
+} 

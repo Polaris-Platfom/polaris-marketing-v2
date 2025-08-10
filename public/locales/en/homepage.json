@@ -1,0 +1,155 @@
+{
+  "hero": {
+    "title": "🚀 Democracy that funds change.",
+    "subtitle": "Where communities propose, vote, and fund collective projects.",
+    "description": "Manage multiple communities from one place. Transparent blockchain, democratic decisions.",
+    "ctaPrimary": "Join the Platform",
+    "ctaSecondary": "Learn More",
+    "watchDemo": "Watch Demo",
+    "getStarted": "Get Started Free",
+    "stats": {
+      "communities": "Communities Created",
+      "fundsManaged": "Total Funds Managed", 
+      "members": "Active Members",
+      "projects": "Projects Completed"
+    },
+    "trustedBy": "Trusted by 500+ communities worldwide",
+    "preview": {
+      "multiCommunity": "Multi-Community",
+      "manageMultiple": "Manage Multiple",
+      "democratic": "Democratic", 
+      "transparentVoting": "Transparent Voting",
+      "fundManagement": "Fund Management",
+      "secureTransparent": "Secure & Transparent",
+      "analytics": "Analytics",
+      "realTimeInsights": "Real-time Insights",
+      "readyEmpower": "Ready to empower your community?",
+      "getStartedToday": "Get Started Today"
+    }
+  },
+  "featuresMain": {
+    "title": "Everything You Need for",
+    "subtitle": "Community Governance",
+    "description": "Polaris provides a comprehensive SaaS platform that empowers organizations to build stronger, more engaged communities through democratic processes and transparent fund management."
+  },
+  "features": {
+    "multiCommunity": {
+      "title": "Multi-Community Management",
+      "description": "Create and manage multiple communities from a single dashboard. Scale your impact across different organizations."
+    },
+    "democraticVoting": {
+      "title": "Democratic Voting System",
+      "description": "Transparent, blockchain-powered voting ensures every voice counts in community decisions."
+    },
+    "secureFund": {
+      "title": "Secure Fund Management",
+      "description": "Track, allocate, and distribute funds with complete transparency and security."
+    },
+    "realTimeAnalytics": {
+      "title": "Real-time Analytics",
+      "description": "Monitor community engagement, funding progress, and impact metrics in real-time."
+    },
+    "enterpriseSecurity": {
+      "title": "Enterprise Security",
+      "description": "Bank-level security with blockchain immutability ensures data integrity and trust."
+    },
+    "globalAccessibility": {
+      "title": "Global Accessibility",
+      "description": "Support for multiple languages and currencies makes community governance accessible worldwide."
+    },
+    "automatedWorkflows": {
+      "title": "Automated Workflows",
+      "description": "Smart contracts automate fund distribution and governance processes, reducing administrative overhead."
+    },
+    "roleBasedPermissions": {
+      "title": "Role-Based Permissions",
+      "description": "Granular permission system allows for different access levels across community administrators and members."
+    }
+  },
+  "featuresCtaSection": {
+    "title": "Ready to Transform Your Community?",
+    "description": "Join thousands of organizations already using Polaris to create more engaged, democratic communities.",
+    "startTrial": "Start Free Trial",
+    "scheduleDemo": "Schedule Demo"
+  },
+  "howItWorks": {
+    "title": "How Polaris Works",
+    "description": "Discover how Polaris transforms community engagement through transparent, democratic processes powered by blockchain technology.",
+    "ctaText": "Ready to start building a better community?",
+    "step1": {
+      "title": "Connect & Verify",
+      "description": "Sign up and verify your identity to participate in community governance"
+    },
+    "step2": {
+      "title": "Browse Proposals", 
+      "description": "Explore community projects and funding proposals that matter to you"
+    },
+    "step3": {
+      "title": "Vote & Earn",
+      "description": "Cast your vote and earn Polar Coins for active participation"
+    },
+    "step4": {
+      "title": "Track Impact",
+      "description": "See how your participation drives real community change"
+    }
+  },
+  "valueProposition": {
+    "title": "Why Choose Polaris?",
+    "description": "Built for organizations that want to empower their communities with transparent, democratic decision-making and collaborative funding.",
+    "multiCommunity": {
+      "title": "Multi-Community Management",
+      "description": "Manage unlimited communities from a single dashboard. Perfect for organizations with multiple projects or regions."
+    },
+    "democraticGovernance": {
+      "title": "Democratic Governance", 
+      "description": "Built-in voting systems with customizable rules. Ensure every voice is heard in your decision-making process."
+    },
+    "collaborativeFunding": {
+      "title": "Collaborative Funding",
+      "description": "Community-driven crowdfunding with transparent tracking. Turn ideas into reality with collective support."
+    },
+    "secureTransparent": {
+      "title": "Secure & Transparent",
+      "description": "Blockchain-powered transparency with enterprise-grade security. Every transaction and vote is immutable."
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Community?",
+    "description": "Join hundreds of organizations using Polaris to build stronger, more democratic communities.",
+    "startTrial": "Start Free Trial",
+    "signIn": "Sign In",
+    "disclaimer": "No credit card required • 14-day free trial • Cancel anytime"
+  },
+  "testimonials": {
+    "title": "Trusted by Communities Worldwide",
+    "testimonial1": {
+      "quote": "Polaris has revolutionized how we make decisions in our co-op. The transparency and ease of use is incredible.",
+      "author": "Maria González",
+      "role": "Community Leader",
+      "community": "Green Valley Co-op"
+    },
+    "testimonial2": {
+      "quote": "Managing multiple neighborhood associations was chaotic before Polaris. Now everything is organized and democratic.",
+      "author": "David Chen",
+      "role": "Municipal Coordinator",
+      "community": "City of Portland"
+    },
+    "testimonial3": {
+      "quote": "The funding features helped us raise $50k for our community garden. The process was transparent and engaging.",
+      "author": "Sarah Williams",
+      "role": "Project Manager", 
+      "community": "Urban Gardens Network"
+    }
+  },
+  "survey": {
+    "title": "Help us build Polaris!",
+    "description": "Your opinion is key to creating the platform that communities need. Share your experience and help us improve.",
+    "buttonText": "Take the Survey",
+    "popupTitle": "Validation Survey - Polaris Platform",
+    "popupDescription": "With your help, we're building a platform to empower communities through digital democracy and collective resource management.",
+    "popupCta": "Complete Survey",
+    "popupClose": "Maybe later",
+    "thankYou": "Thank you for your participation!",
+    "timeEstimate": "2-3 minutes"
+  }
+} 

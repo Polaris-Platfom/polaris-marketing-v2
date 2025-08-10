@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "blog": "Blog",
+    "contact": "Contacto", 
+    "login": "Iniciar Sesión",
+    "signUp": "Registro Gratuito",
+    "dashboard": "Panel",
+    "features": "Características",
+    "pricing": "Precios",
+    "support": "Soporte",
+    "docs": "Documentación"
+  },
+  "footer": {
+    "about": "Acerca de Polaris",
+    "team": "Equipo",
+    "privacy": "Política de Privacidad", 
+    "terms": "Términos de Servicio",
+    "contact": "Contáctanos",
+    "rights": "Todos los derechos reservados.",
+    "quickLinks": "Enlaces Rápidos",
+    "stayUpdated": "Mantente Actualizado",
+    "newsletterDescription": "Suscríbete a nuestro boletín para recibir actualizaciones sobre el desarrollo de la plataforma y noticias de la comunidad.",
+    "enterEmail": "Ingresa tu correo",
+    "subscribe": "Suscribirse",
+    "socialMedia": "Síguenos", 
+    "company": "Empresa",
+    "product": "Producto",
+    "legal": "Legal",
+    "support": "Soporte"
+  }
+} 
