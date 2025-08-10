@@ -26,7 +26,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/polaris-platfom/polaris-marketing-standalone
+  IMAGE_NAME: ghcr.io/polaris-platfom/polaris-marketing-v2
 
 jobs:
   build-and-push:
