@@ -43,15 +43,15 @@ services:
       - proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.marketing.rule=Host(`polarisplatform.ch`,`www.polarisplatform.ch`)"
+      - "traefik.http.routers.marketing.rule=Host(`polarisplatform.ch`) || Host(`www.polarisplatform.ch`)"
       - "traefik.http.routers.marketing.entrypoints=websecure"
       - "traefik.http.routers.marketing.tls=true"
       - "traefik.http.routers.marketing.tls.certresolver=letsencrypt"
       - "traefik.http.services.marketing.loadbalancer.server.port=3000"
       # Optional redirect HTTP→HTTPS
-      - "traefik.http.routers.marketing-http.rule=Host(`polarisplatform.ch`,`www.polarisplatform.ch`)"
+      - "traefik.http.routers.marketing-http.rule=Host(`polarisplatform.ch`) || Host(`www.polarisplatform.ch`)"
       - "traefik.http.routers.marketing-http.entrypoints=web"
-      - "traefik.http.routers.marketing-http.middlewares=redirect-to-https@docker"
+      - "traefik.http.routers.marketing-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
     restart: unless-stopped
     healthcheck:
