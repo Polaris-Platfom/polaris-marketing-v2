@@ -1,0 +1,1079 @@
+{
+	"info": {
+		"_postman_id": "polaris-blog-api-v1",
+		"name": "Polaris Blog API",
+		"description": "Complete collection for testing Polaris Blog Management API endpoints.\n\n## Features\n- Create, Read, Update, Delete blog posts\n- Multi-language support (en, es, de)\n- Auto-generated IDs\n- Reading time calculation\n- Category and featured filtering\n\n## Setup\n1. Import this collection into Postman\n2. Set the `baseUrl` variable to your server URL (default: http://localhost:3000)\n3. Run requests in order for best results\n\n## Documentation\nFor detailed API documentation, see: docs/api/blog-endpoints.md",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "polaris-platform"
+	},
+	"item": [
+		{
+			"name": "List Posts",
+			"item": [
+				{
+					"name": "Get All Posts (English)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response is successful\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});",
+									"",
+									"pm.test(\"Response has data array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data).to.be.an('array');",
+									"});",
+									"",
+									"// Save first post ID for later use",
+									"var jsonData = pm.response.json();",
+									"if (jsonData.data && jsonData.data.length > 0) {",
+									"    pm.environment.set(\"testPostId\", jsonData.data[0].id);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/list?locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"list"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "Language (en, es, de)"
+								}
+							]
+						},
+						"description": "Get all blog posts in English language."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Featured Posts Only",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"All posts are featured\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    jsonData.data.forEach(function(post) {",
+									"        pm.expect(post.featured).to.eql(true);",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/list?locale=en&featured=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"list"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en"
+								},
+								{
+									"key": "featured",
+									"value": "true",
+									"description": "Filter featured posts"
+								}
+							]
+						},
+						"description": "Get only featured blog posts."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Technology Category Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/list?locale=en&category=technology",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"list"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en"
+								},
+								{
+									"key": "category",
+									"value": "technology",
+									"description": "Filter by category"
+								}
+							]
+						},
+						"description": "Get posts from technology category."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Limited Posts (5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/list?locale=en&limit=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"list"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Limit number of results"
+								}
+							]
+						},
+						"description": "Get first 5 blog posts only."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Spanish Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/list?locale=es",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"list"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "es"
+								}
+							]
+						},
+						"description": "Get all blog posts in Spanish."
+					},
+					"response": []
+				}
+			],
+			"description": "List and filter blog posts with various options."
+		},
+		{
+			"name": "Get Single Post",
+			"item": [
+				{
+					"name": "Get Post by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Post has all required fields\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data).to.have.property('id');",
+									"    pm.expect(jsonData.data).to.have.property('title');",
+									"    pm.expect(jsonData.data).to.have.property('content');",
+									"    pm.expect(jsonData.data).to.have.property('author');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/get?id=1&locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Post ID"
+								},
+								{
+									"key": "locale",
+									"value": "en"
+								}
+							]
+						},
+						"description": "Get a specific blog post by its ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Non-existent Post (404)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Error message is present\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"    pm.expect(jsonData.error).to.exist;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/get?id=99999&locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "99999",
+									"description": "Non-existent ID"
+								},
+								{
+									"key": "locale",
+									"value": "en"
+								}
+							]
+						},
+						"description": "Test error handling for non-existent post."
+					},
+					"response": []
+				}
+			],
+			"description": "Get individual blog posts by ID."
+		},
+		{
+			"name": "Create Post",
+			"item": [
+				{
+					"name": "Create Technology Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Post was created successfully\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"    pm.expect(jsonData.data.id).to.exist;",
+									"});",
+									"",
+									"// Save the created post ID for update/delete tests",
+									"var jsonData = pm.response.json();",
+									"pm.environment.set(\"createdPostId\", jsonData.data.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Introduction to Blockchain Technology\",\n  \"excerpt\": \"Discover how blockchain is transforming digital transactions and creating new possibilities for decentralized systems.\",\n  \"content\": \"## What is Blockchain?\\n\\nBlockchain is a distributed ledger technology that maintains a secure and decentralized record of transactions.\\n\\n### Key Features\\n\\n- **Decentralization:** No single point of control\\n- **Transparency:** All transactions are visible\\n- **Immutability:** Records cannot be altered\\n- **Security:** Cryptographic protection\\n\\n### Real-World Applications\\n\\n1. **Cryptocurrency:** Digital currencies like Bitcoin\\n2. **Supply Chain:** Track products from origin to consumer\\n3. **Smart Contracts:** Self-executing agreements\\n4. **Identity Verification:** Secure digital identities\\n\\n## The Future\\n\\nBlockchain technology continues to evolve, offering new solutions for trust and transparency in digital systems. As adoption grows, we'll see even more innovative applications across various industries.\",\n  \"author\": {\n    \"name\": \"Osmel P. Teran\",\n    \"role\": \"CTO & Co-Founder\",\n    \"bio\": \"Blockchain engineer with expertise in decentralized governance systems and smart contracts.\",\n    \"image\": \"/assets/images/team/osmel-teran.png\",\n    \"initials\": \"OPT\"\n  },\n  \"category\": \"technology\",\n  \"readTime\": 6,\n  \"image\": \"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=60\",\n  \"tags\": [\"blockchain\", \"technology\", \"decentralization\", \"cryptocurrency\"],\n  \"featured\": true,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						},
+						"description": "Create a new blog post about blockchain technology."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Community Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Post category is community\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data.category).to.eql('community');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Building Engaged Online Communities\",\n  \"excerpt\": \"Learn best practices for creating and maintaining vibrant, engaged online communities that thrive.\",\n  \"content\": \"## The Art of Community Building\\n\\nBuilding a successful online community requires more than just creating a space for people to gather. It demands intentional strategy, genuine engagement, and consistent nurturing.\\n\\n### Core Principles\\n\\n**1. Define Clear Purpose**\\nYour community should have a clear mission that resonates with members.\\n\\n**2. Foster Authentic Connections**\\nEncourage meaningful interactions beyond superficial engagement.\\n\\n**3. Empower Members**\\nGive community members ownership and leadership opportunities.\\n\\n**4. Maintain Consistency**\\nRegular communication and presence build trust and habit.\\n\\n### Practical Tips\\n\\n- Welcome new members warmly\\n- Create engaging content regularly\\n- Celebrate member achievements\\n- Address conflicts promptly and fairly\\n- Listen to feedback and adapt\\n\\n## Measuring Success\\n\\nTrack both quantitative metrics (members, engagement rate) and qualitative indicators (member satisfaction, quality of discussions) to gauge community health.\",\n  \"author\": {\n    \"name\": \"Dionne P. Teran\",\n    \"role\": \"Head of Community\",\n    \"bio\": \"Community management expert with deep understanding of digital democracy and civic engagement processes.\",\n    \"image\": \"/team/dionne.jpg\",\n    \"initials\": \"DPT\"\n  },\n  \"category\": \"community\",\n  \"readTime\": 5,\n  \"image\": \"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop&q=60\",\n  \"tags\": [\"community\", \"engagement\", \"online-communities\", \"best-practices\"],\n  \"featured\": false,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						},
+						"description": "Create a community-focused blog post."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Case Study Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Case Study: Digital Transformation in Local Government\",\n  \"excerpt\": \"How a small municipality revolutionized citizen engagement through digital platforms and transparent governance.\",\n  \"content\": \"## The Challenge\\n\\nThe City of Riverside faced declining civic participation and growing citizen frustration with traditional government processes.\\n\\n### Initial Situation\\n- Only 8% voter turnout in local decisions\\n- Limited transparency in budget allocation\\n- Disconnected community members\\n- Slow response to citizen concerns\\n\\n## The Solution\\n\\nImplementation of a comprehensive digital platform for community engagement and governance.\\n\\n### Key Components\\n\\n**Digital Voting System**\\nSecure, accessible online voting increased participation by 340%.\\n\\n**Transparent Budget Dashboard**\\nReal-time visibility into municipal spending and project progress.\\n\\n**Community Forum**\\nDirect communication channel between citizens and officials.\\n\\n**Mobile App**\\nReport issues, track resolutions, participate in polls on-the-go.\\n\\n## Results\\n\\n- **Participation:** 8% → 35% turnout\\n- **Satisfaction:** 92% citizen approval rating\\n- **Efficiency:** 60% faster issue resolution\\n- **Trust:** Significant increase in government trust scores\\n\\n## Key Lessons\\n\\n1. Start with pilot programs to build trust\\n2. Prioritize accessibility for all demographics\\n3. Maintain consistent communication\\n4. Respond promptly to feedback\\n5. Celebrate wins publicly\\n\\n## Conclusion\\n\\nDigital transformation in government is not just about technology—it's about reimagining how citizens and government interact to create more responsive, transparent, and effective governance.\",\n  \"author\": {\n    \"name\": \"Osmel P. Teran\",\n    \"role\": \"CTO & Co-Founder\",\n    \"bio\": \"Blockchain engineer with expertise in decentralized governance systems and smart contracts.\",\n    \"image\": \"/assets/images/team/osmel-teran.png\",\n    \"initials\": \"OPT\"\n  },\n  \"category\": \"case-study\",\n  \"readTime\": 8,\n  \"image\": \"https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60\",\n  \"tags\": [\"case-study\", \"digital-transformation\", \"government\", \"civic-engagement\"],\n  \"featured\": false,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						},
+						"description": "Create a case study blog post."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Minimal Post (Auto Reading Time)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Quick Tips for Better Meetings\",\n  \"excerpt\": \"Five simple tips to make your community meetings more productive and engaging.\",\n  \"content\": \"Running effective meetings is crucial for community success. Here are five quick tips: 1) Set a clear agenda beforehand. 2) Start and end on time. 3) Encourage everyone to participate. 4) Take actionable notes. 5) Follow up on decisions made. These simple practices can dramatically improve your meeting outcomes.\",\n  \"author\": {\n    \"name\": \"Dionne P. Teran\",\n    \"role\": \"Head of Community\",\n    \"bio\": \"Community management expert.\",\n    \"image\": \"/team/dionne.jpg\",\n    \"initials\": \"DPT\"\n  },\n  \"category\": \"community\",\n  \"image\": \"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop&q=60\",\n  \"tags\": [\"meetings\", \"productivity\", \"tips\"],\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						},
+						"description": "Create a minimal post without readTime (will be auto-calculated) or featured flag."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Invalid Post (Missing Fields)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"Error message indicates missing fields\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"    pm.expect(jsonData.error).to.include('Missing required fields');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Incomplete Post\",\n  \"excerpt\": \"Missing required fields\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						},
+						"description": "Test validation by attempting to create a post with missing required fields."
+					},
+					"response": []
+				}
+			],
+			"description": "Create new blog posts with various content types."
+		},
+		{
+			"name": "Update Post",
+			"item": [
+				{
+					"name": "Update Post Title and Featured",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Post was updated\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"    pm.expect(jsonData.data.featured).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Ensure we have a post ID to update",
+									"if (!pm.environment.get(\"createdPostId\")) {",
+									"    console.log(\"No createdPostId found. Please run 'Create Technology Post' first.\");",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{createdPostId}}\",\n  \"title\": \"Introduction to Blockchain Technology - Updated Edition\",\n  \"excerpt\": \"Discover how blockchain is transforming digital transactions and creating new possibilities for decentralized systems. Now with updated content!\",\n  \"featured\": true,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"update"
+							]
+						},
+						"description": "Update the title, excerpt, and featured status of a previously created post. Uses the ID from the 'Create Technology Post' request."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post Content Only",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{createdPostId}}\",\n  \"content\": \"## What is Blockchain? (Updated)\\n\\nBlockchain is a revolutionary distributed ledger technology that maintains a secure and decentralized record of transactions.\\n\\n### Key Features (Expanded)\\n\\n- **Decentralization:** No single point of control or failure\\n- **Transparency:** All transactions are publicly visible and verifiable\\n- **Immutability:** Once recorded, data cannot be altered or deleted\\n- **Security:** Advanced cryptographic protection ensures data integrity\\n- **Consensus:** Network agreement validates all transactions\\n\\n### Real-World Applications (Updated)\\n\\n1. **Cryptocurrency:** Digital currencies like Bitcoin and Ethereum\\n2. **Supply Chain:** Track products from origin to consumer with full transparency\\n3. **Smart Contracts:** Self-executing agreements with automatic enforcement\\n4. **Identity Verification:** Secure, portable digital identities\\n5. **Healthcare:** Secure patient records and medical data sharing\\n6. **Voting Systems:** Transparent and tamper-proof electoral processes\\n\\n## The Future\\n\\nBlockchain technology continues to evolve rapidly, offering innovative solutions for trust and transparency in digital systems. As adoption grows across industries, we're seeing transformative applications in finance, healthcare, government, and beyond. The next decade promises even more groundbreaking developments in this space.\",\n  \"readTime\": 7,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"update"
+							]
+						},
+						"description": "Update only the content and reading time of a post."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Non-existent Post (404)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Error indicates post not found\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"    pm.expect(jsonData.error).to.include('not found');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"99999\",\n  \"title\": \"This post doesn't exist\",\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"update"
+							]
+						},
+						"description": "Test error handling when trying to update a non-existent post."
+					},
+					"response": []
+				}
+			],
+			"description": "Update existing blog posts (partial updates supported)."
+		},
+		{
+			"name": "Delete Post",
+			"item": [
+				{
+					"name": "Delete Created Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Post was deleted\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"    pm.expect(jsonData.message).to.include('deleted');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Ensure we have a post ID to delete",
+									"if (!pm.environment.get(\"createdPostId\")) {",
+									"    console.log(\"No createdPostId found. Please run 'Create Technology Post' first.\");",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{createdPostId}}\",\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"delete"
+							]
+						},
+						"description": "Delete the post that was created in the 'Create Technology Post' request."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Non-existent Post (404)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Error indicates post not found\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"99999\",\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"delete"
+							]
+						},
+						"description": "Test error handling when trying to delete a non-existent post."
+					},
+					"response": []
+				}
+			],
+			"description": "Delete blog posts."
+		},
+		{
+			"name": "Full Workflow Test",
+			"item": [
+				{
+					"name": "Step 1 - Create Test Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Post created\", function () {",
+									"    pm.response.to.have.status(201);",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"workflowPostId\", jsonData.data.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Workflow Test Post\",\n  \"excerpt\": \"This post will be created, updated, and deleted\",\n  \"content\": \"Initial content for workflow testing.\",\n  \"author\": {\n    \"name\": \"Test Author\",\n    \"role\": \"Tester\",\n    \"bio\": \"Testing workflows\",\n    \"image\": \"/test.jpg\",\n    \"initials\": \"TA\"\n  },\n  \"category\": \"technology\",\n  \"image\": \"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800\",\n  \"tags\": [\"test\"],\n  \"featured\": false,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2 - Verify Post Created",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Post exists\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data.title).to.eql(\"Workflow Test Post\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/get?id={{workflowPostId}}&locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{workflowPostId}}"
+								},
+								{
+									"key": "locale",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3 - Update Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Post updated\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data.featured).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{workflowPostId}}\",\n  \"title\": \"Workflow Test Post - Updated\",\n  \"featured\": true,\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4 - Verify Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update verified\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data.title).to.include(\"Updated\");",
+									"    pm.expect(jsonData.data.featured).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/get?id={{workflowPostId}}&locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{workflowPostId}}"
+								},
+								{
+									"key": "locale",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5 - Delete Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Post deleted\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{workflowPostId}}\",\n  \"locale\": \"en\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 6 - Verify Deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Deletion verified (404)\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/blog/get?id={{workflowPostId}}&locale=en",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"blog",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{workflowPostId}}"
+								},
+								{
+									"key": "locale",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Complete workflow testing: Create → Verify → Update → Verify → Delete → Verify. Run this folder to test the complete lifecycle."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
+

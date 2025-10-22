@@ -181,6 +181,78 @@ The application includes built-in health checks:
 - **Docker**: Automatic health check configuration
 - **Monitoring**: Ready for integration with monitoring tools
 
+## 📝 Blog Management API
+
+The application includes RESTful API endpoints for managing blog posts:
+
+### Available Endpoints
+
+- **POST** `/api/blog/create` - Create a new blog post
+- **PUT** `/api/blog/update` - Update an existing blog post
+- **DELETE** `/api/blog/delete` - Delete a blog post
+- **GET** `/api/blog/list` - List all blog posts with filtering
+- **GET** `/api/blog/get` - Get a specific blog post by ID
+
+### Quick Example
+
+```bash
+# Create a new blog post
+curl -X POST http://localhost:3000/api/blog/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "My New Post",
+    "excerpt": "A brief summary",
+    "content": "Full content here...",
+    "author": {
+      "name": "John Doe",
+      "role": "Author",
+      "bio": "Bio text",
+      "image": "/images/author.jpg",
+      "initials": "JD"
+    },
+    "category": "technology",
+    "image": "https://example.com/image.jpg",
+    "tags": ["tech", "innovation"],
+    "locale": "en"
+  }'
+```
+
+### Testing
+
+Test all endpoints using your preferred method:
+
+**Option 1: Postman Collection (Recommended)**
+```
+1. Import postman/Polaris-Blog-API.postman_collection.json
+2. Import postman/Polaris-Blog-API-Local.postman_environment.json
+3. Select environment and start testing
+```
+See `postman/README.md` for detailed instructions.
+
+**Option 2: Automated Scripts**
+```bash
+# PowerShell (Windows)
+.\scripts\test-blog-api.ps1
+
+# Bash (Mac/Linux)
+bash scripts/test-blog-api.sh
+```
+
+### Documentation
+
+For detailed API documentation, see: [docs/api/blog-endpoints.md](docs/api/blog-endpoints.md)
+
+### Features
+
+- ✅ Multi-language support (en, es, de)
+- ✅ Auto ID generation
+- ✅ Reading time calculation
+- ✅ Category and tag filtering
+- ✅ Featured posts support
+- ✅ JSON file storage
+
+> **Note**: These endpoints currently have no authentication. In production, implement proper authentication and authorization.
+
 ## 🔒 Security
 
 - **Environment Validation**: Comprehensive environment variable validation

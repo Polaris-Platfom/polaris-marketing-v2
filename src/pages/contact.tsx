@@ -104,7 +104,7 @@ const ContactPage: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <Mail className="text-primary-500 mr-4" size={24} />
+                  <Mail className="text-primary-500 dark:text-accent-400 mr-4" size={24} />
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact:email')}</h3>
                     <a 
@@ -117,7 +117,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <Phone className="text-primary-500 mr-4" size={24} />
+                  <Phone className="text-primary-500 dark:text-accent-400 mr-4" size={24} />
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact:phone')}</h3>
                     <p className="text-gray-600 dark:text-gray-300">+41 79 104 88 85</p>
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <MapPin className="text-primary-500 mr-4" size={24} />
+                  <MapPin className="text-primary-500 dark:text-accent-400 mr-4" size={24} />
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">{t('contact:address')}</h3>
                     <p className="text-gray-600 dark:text-gray-300">

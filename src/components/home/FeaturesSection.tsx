@@ -35,7 +35,7 @@ const FeaturesSection: React.FC = () => {
       icon: BarChart3,
       title: t('features.realTimeAnalytics.title'),
       description: t('features.realTimeAnalytics.description'),
-      color: 'text-primary-500',
+      color: 'text-primary-600 dark:text-primary-300',
       bgColor: 'bg-primary-50 dark:bg-primary-900/20',
     },
     {

@@ -79,7 +79,7 @@ const HowItWorksSection: React.FC = () => {
               >
                 <Card className="text-center h-full relative overflow-hidden">
                   {/* Step Number */}
-                  <div className="absolute top-4 right-4 w-8 h-8 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 flex items-center justify-center text-sm font-bold">
+                  <div className="absolute top-4 right-4 w-8 h-8 bg-white dark:bg-gray-400 text-gray-900 dark:text-gray-900 flex items-center justify-center text-sm font-bold shadow-md border border-gray-200 dark:border-gray-300">
                     {index + 1}
                   </div>
 

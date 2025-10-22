@@ -37,7 +37,8 @@
     "favicon": "/assets/icons/favicon.ico",
     "favicon16": "/assets/icons/favicon-16x16.png",
     "favicon32": "/assets/icons/favicon-32x32.png",
-    "appleTouch": "/assets/icons/apple-touch-icon.png"
+    "appleTouch": "/assets/icons/apple-touch-icon.png",
+    "switzerlandFlag": "/assets/icons/switzerland-flag.svg"
   },
   "usage": {
     "main": "Navigation, buttons, small spaces",

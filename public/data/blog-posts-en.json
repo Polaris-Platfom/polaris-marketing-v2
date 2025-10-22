@@ -1,5 +1,53 @@
 [
   {
+    "id": "8",
+    "title": "Introduction to Blockchain Technology33",
+    "excerpt": "Discover how blockchain is transforming digital transactions and creating new possibilities for decentralized systems.",
+    "content": "## What is Blockchain?\n\nBlockchain is a distributed ledger technology that maintains a secure and decentralized record of transactions.\n\n### Key Features\n\n- **Decentralization:** No single point of control\n- **Transparency:** All transactions are visible\n- **Immutability:** Records cannot be altered\n- **Security:** Cryptographic protection\n\n### Real-World Applications\n\n1. **Cryptocurrency:** Digital currencies like Bitcoin\n2. **Supply Chain:** Track products from origin to consumer\n3. **Smart Contracts:** Self-executing agreements\n4. **Identity Verification:** Secure digital identities\n\n## The Future\n\nBlockchain technology continues to evolve, offering new solutions for trust and transparency in digital systems. As adoption grows, we'll see even more innovative applications across various industries.",
+    "author": {
+      "name": "Osmel P. Teran",
+      "role": "CTO & Co-Founder",
+      "bio": "Blockchain engineer with expertise in decentralized governance systems and smart contracts.",
+      "image": "/assets/images/team/osmel-teran.png",
+      "initials": "OPT"
+    },
+    "date": "2025-10-22",
+    "category": "technology",
+    "readTime": 6,
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=60",
+    "tags": [
+      "blockchain",
+      "technology",
+      "decentralization",
+      "cryptocurrency"
+    ],
+    "featured": true
+  },
+  {
+    "id": "7",
+    "title": "Introduction to Blockchain Technology",
+    "excerpt": "Discover how blockchain is transforming digital transactions and creating new possibilities for decentralized systems.",
+    "content": "## What is Blockchain?\n\nBlockchain is a distributed ledger technology that maintains a secure and decentralized record of transactions.\n\n### Key Features\n\n- **Decentralization:** No single point of control\n- **Transparency:** All transactions are visible\n- **Immutability:** Records cannot be altered\n- **Security:** Cryptographic protection\n\n### Real-World Applications\n\n1. **Cryptocurrency:** Digital currencies like Bitcoin\n2. **Supply Chain:** Track products from origin to consumer\n3. **Smart Contracts:** Self-executing agreements\n4. **Identity Verification:** Secure digital identities\n\n## The Future\n\nBlockchain technology continues to evolve, offering new solutions for trust and transparency in digital systems. As adoption grows, we'll see even more innovative applications across various industries.",
+    "author": {
+      "name": "Osmel P. Teran",
+      "role": "CTO & Co-Founder",
+      "bio": "Blockchain engineer with expertise in decentralized governance systems and smart contracts.",
+      "image": "/assets/images/team/osmel-teran.png",
+      "initials": "OPT"
+    },
+    "date": "2025-10-22",
+    "category": "technology",
+    "readTime": 6,
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=60",
+    "tags": [
+      "blockchain",
+      "technology",
+      "decentralization",
+      "cryptocurrency"
+    ],
+    "featured": true
+  },
+  {
     "id": "1",
     "title": "The Future of Community Governance: How Blockchain is Revolutionizing Democracy",
     "excerpt": "Exploring how blockchain technology is revolutionizing the way communities make decisions and allocate resources transparently and democratically.",
@@ -15,7 +63,13 @@
     "category": "technology",
     "readTime": 8,
     "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=60",
-    "tags": ["blockchain", "governance", "democracy", "community", "technology"],
+    "tags": [
+      "blockchain",
+      "governance",
+      "democracy",
+      "community",
+      "technology"
+    ],
     "featured": true
   },
   {
@@ -34,7 +88,13 @@
     "category": "community",
     "readTime": 6,
     "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop&q=60",
-    "tags": ["transparency", "community", "participation", "trust", "governance"],
+    "tags": [
+      "transparency",
+      "community",
+      "participation",
+      "trust",
+      "governance"
+    ],
     "featured": false
   },
   {
@@ -53,7 +113,13 @@
     "category": "case-study",
     "readTime": 12,
     "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=60",
-    "tags": ["case-study", "community-funding", "park-renovation", "success-story", "blockchain"],
+    "tags": [
+      "case-study",
+      "community-funding",
+      "park-renovation",
+      "success-story",
+      "blockchain"
+    ],
     "featured": false
   },
   {
@@ -72,7 +138,13 @@
     "category": "case-study",
     "readTime": 10,
     "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-    "tags": ["case-study", "community-funding", "success-story", "implementation", "best-practices"],
+    "tags": [
+      "case-study",
+      "community-funding",
+      "success-story",
+      "implementation",
+      "best-practices"
+    ],
     "featured": false
   },
   {
@@ -91,7 +163,13 @@
     "category": "future",
     "readTime": 7,
     "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=60",
-    "tags": ["digital-democracy", "future", "technology", "governance", "innovation"],
+    "tags": [
+      "digital-democracy",
+      "future",
+      "technology",
+      "governance",
+      "innovation"
+    ],
     "featured": false
   },
   {
@@ -110,7 +188,13 @@
     "category": "tutorial",
     "readTime": 5,
     "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=60",
-    "tags": ["voting", "step-by-step", "tutorial", "community", "governance"],
+    "tags": [
+      "voting",
+      "step-by-step",
+      "tutorial",
+      "community",
+      "governance"
+    ],
     "featured": false
   }
-] 
+]

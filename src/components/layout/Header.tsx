@@ -5,7 +5,6 @@ import { useTranslation } from 'next-i18next'
 import { Sun, Moon, Menu, X } from 'lucide-react'
 import LanguageSelector from '../ui/LanguageSelector'
 import { useTheme } from '../../hooks/useTheme'
-import { PLATFORM_URLS } from '../../config/env'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -93,17 +92,9 @@ const Header: React.FC = () => {
             </div>
 
             {/* App Access - Hidden on mobile */}
-            <div className="hidden md:flex items-center space-x-3">
+            <div className="hidden md:flex items-center">
               <a
-                href={PLATFORM_URLS.LOGIN}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-500 hover:text-primary-600 dark:text-accent-500 dark:hover:text-accent-400 px-3 py-2 text-sm font-medium transition-colors border border-primary-500 dark:border-accent-500 hover:bg-primary-50 dark:hover:bg-accent-900/20"
-              >
-                {t('nav.login', 'Login')}
-              </a>
-              <a
-                href={PLATFORM_URLS.HOME}
+                href="https://app.polarisplatform.ch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 text-sm font-medium transition-colors"
@@ -140,18 +131,9 @@ const Header: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2 space-y-2">
+              <div className="px-3 py-2">
                 <a
-                  href={PLATFORM_URLS.LOGIN}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center text-primary-500 hover:text-primary-600 dark:text-accent-500 dark:hover:text-accent-400 border border-primary-500 dark:border-accent-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary-50 dark:hover:bg-accent-900/20"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t('nav.login', 'Login')}
-                </a>
-                <a
-                  href={PLATFORM_URLS.HOME}
+                  href="https://app.polarisplatform.ch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 text-sm font-medium transition-colors"

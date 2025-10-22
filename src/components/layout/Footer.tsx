@@ -218,9 +218,19 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 dark:border-gray-700 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © {currentYear} Polaris Platform. {t('footer.copyright')}
-            </p>
+            <div className="flex flex-col items-center sm:items-start space-y-1">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                © {currentYear} Polaris Platform. {t('footer.copyright')}
+              </p>
+              <p className="text-gray-500 dark:text-gray-500 text-xs flex items-center gap-1.5">
+                Made in Switzerland 
+                <img 
+                  src="/assets/icons/switzerland-flag.svg" 
+                  alt="Switzerland Flag" 
+                  className="inline-block w-4 h-4"
+                />
+              </p>
+            </div>
             
             <div className="flex space-x-6">
               <Link 

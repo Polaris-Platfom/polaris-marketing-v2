@@ -207,4 +207,40 @@ export interface CommunityContextType {
   joinCommunity: (communityId: string) => Promise<void>
   leaveCommunity: (communityId: string) => Promise<void>
   refreshCommunities: () => Promise<void>
+}
+
+// Blog types
+export interface BlogAuthor {
+  name: string
+  role: string
+  bio: string
+  image: string
+  initials: string
+}
+
+export interface BlogPost {
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: BlogAuthor
+  date: string
+  category: string
+  readTime: number
+  image: string
+  tags: string[]
+  featured: boolean
+}
+
+export interface BlogFormData {
+  title: string
+  excerpt: string
+  content: string
+  author: BlogAuthor
+  category: string
+  readTime: number
+  image: string
+  tags: string[]
+  featured: boolean
+  locale?: string
 } 
