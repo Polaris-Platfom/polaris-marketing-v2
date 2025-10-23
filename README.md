@@ -11,8 +11,8 @@ The official marketing website for Polaris Platform - an independent, containeri
 - **⚡ High Performance** - Optimized Next.js with static generation
 - **📊 Real-time Statistics** - Dynamic platform statistics display
 - **📝 Blog System** - Multi-language blog with consistent content validation
-- **📧 Contact Forms** - Integrated email functionality with SMTP
-- **🔗 Google Sheets Integration** - Dynamic team and testimonials data
+- **📧 Contact Forms** - Integrated email with Resend via Supabase Edge Functions
+- **🗄️ Supabase Integration** - Database for subscribers and applications, Edge Functions for emails
 - **🐳 Docker Ready** - Production-optimized containerization
 - **🔒 Security First** - Environment validation and security headers
 
@@ -25,9 +25,9 @@ This is a standalone Next.js application that was extracted from the Polaris mon
 - **Frontend**: Next.js 14, React 18, TypeScript
 - **Styling**: Tailwind CSS, Framer Motion
 - **Internationalization**: next-i18next
-- **Email**: Nodemailer
-- **Data**: Google Sheets API
-- **Deployment**: Docker, GitHub Actions
+- **Database**: Supabase (PostgreSQL with RLS)
+- **Email**: Resend via Supabase Edge Functions
+- **Deployment**: Docker, Netlify, GitHub Actions
 
 ## 🚀 Quick Start
 
@@ -81,28 +81,58 @@ docker-compose up --build
 Copy `env.example` to `.env.local` and configure:
 
 - **Application URLs**: Set correct URLs for API, Platform, and Marketing
-- **Email Configuration**: SMTP settings for contact forms
-- **Google Sheets**: Service account credentials for dynamic data
-- **Analytics**: Google Analytics and Tag Manager IDs
+- **Supabase**: Project URL, anon key, and service role key
+- **Resend**: API key for email sending
+- **Email Addresses**: Configure FROM_EMAIL, CONTACT_EMAIL, NEWSLETTER_EMAIL
+- **Analytics**: Google Analytics and Tag Manager IDs (optional)
 
-### Google Sheets Setup
+### Supabase Setup
 
-For dynamic team and testimonials data:
+The project uses Supabase for:
+- Newsletter subscriber management
+- Job application storage
+- Email sending via Edge Functions
 
-1. Create a Google Cloud service account
-2. Generate a private key (JSON)
-3. Share your Google Sheet with the service account email
-4. Add the credentials to your environment variables
+**Quick Setup:**
+1. Create a Supabase project
+2. Get your API credentials from project settings
+3. Configure environment variables
+4. Deploy Edge Functions (already done via MCP)
 
-Detailed setup guide: [docs/setup/google-sheets-setup.md](docs/setup/google-sheets-setup.md)
+Detailed setup guide: [docs/setup/supabase-setup.md](docs/setup/supabase-setup.md)
 
 ## 🚀 Deployment
 
-### Production Deployment
+### Netlify Deployment (Recommended)
 
-The application uses GitHub Actions for automated deployment:
+The easiest way to deploy the Polaris Marketing website:
 
-1. **Set up repository secrets**:
+1. **Install Netlify Plugin**:
+   ```bash
+   npm install
+   ```
+
+2. **Run Pre-Deployment Check**:
+   ```bash
+   # PowerShell (Windows)
+   .\scripts\pre-deploy-check.ps1
+
+   # Bash (Mac/Linux)
+   bash scripts/pre-deploy-check.sh
+   ```
+
+3. **Deploy to Netlify**:
+   - Connect your GitHub repository to Netlify
+   - Configure environment variables (see `env.example`)
+   - Deploy automatically on push to `main`
+
+📖 **Detailed Guide**: [docs/setup/netlify-deployment.md](docs/setup/netlify-deployment.md)
+
+### Traditional Docker Deployment
+
+For self-hosted deployments:
+
+1. **Set up repository secrets** (GitHub Actions):
    - `DEPLOY_HOST`: Your server IP/domain
    - `DEPLOY_USER`: SSH username
    - `DEPLOY_KEY`: SSH private key

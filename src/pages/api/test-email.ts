@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { testEmailConnection } from '../../lib/email'
+import { testConnection, sendEmail } from '../../lib/supabase'
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,32 +14,61 @@ export default async function handler(
   }
 
   try {
-    const result = await testEmailConnection()
+    // Test Supabase connection
+    const supabaseResult = await testConnection()
     
-    if (result.success) {
+    if (!supabaseResult.success) {
+      return res.status(500).json({
+        success: false,
+        message: 'Supabase connection failed. Please check your configuration.',
+        error: supabaseResult.message,
+        config: {
+          url: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'configured' : 'missing',
+          anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'configured' : 'missing',
+        }
+      })
+    }
+
+    // Test email function with a test payload
+    const emailResult = await sendEmail({
+      type: 'contact',
+      data: {
+        name: 'Test User',
+        email: 'test@example.com',
+        message: 'This is a test message from the API test endpoint.'
+      }
+    })
+
+    if (emailResult.success) {
       return res.status(200).json({
         success: true,
-        message: 'Email connection successful! SMTP is properly configured.',
+        message: 'Supabase and email function are working correctly!',
+        tests: {
+          supabase: 'connected',
+          emailFunction: 'working',
+        },
         config: {
-          host: process.env.SMTP_HOST,
-          port: process.env.SMTP_PORT,
-          user: process.env.SMTP_USER,
-          from: process.env.SMTP_FROM,
+          supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'configured' : 'missing',
+          supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'configured' : 'missing',
         }
       })
     } else {
       return res.status(500).json({
         success: false,
-        message: 'Email connection failed. Please check your SMTP configuration.',
-        error: result.error
+        message: 'Email function test failed. Check Edge Function logs in Supabase dashboard.',
+        error: emailResult.error,
+        tests: {
+          supabase: 'connected',
+          emailFunction: 'failed',
+        }
       })
     }
 
   } catch (error) {
-    console.error('Email test error:', error)
+    console.error('Test error:', error)
     return res.status(500).json({
       success: false,
-      message: 'Error testing email connection',
+      message: 'Error running tests',
       error: error instanceof Error ? error.message : 'Unknown error'
     })
   }

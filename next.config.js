@@ -4,7 +4,8 @@ const { i18n } = require('./next-i18next.config.js')
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  output: 'standalone',
+  // Note: 'standalone' output is not needed for Netlify
+  // Netlify uses @netlify/plugin-nextjs for optimal deployment
   i18n,
   // Allow optimized loading of remote images used by blog posts
   // This enables Next.js Image Optimization for Unsplash assets

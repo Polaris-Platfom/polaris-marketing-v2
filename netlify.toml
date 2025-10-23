@@ -1,0 +1,58 @@
+# Netlify configuration for Polaris Marketing Website
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Directory with the production build
+  publish = ".next"
+  
+  # Node.js version
+  [build.environment]
+    NODE_VERSION = "20"
+    NPM_VERSION = "9"
+
+# Next.js Runtime Plugin (Essential for Next.js on Netlify)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirect rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+
+# Cache static assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Production context settings
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Deploy preview settings
+[context.deploy-preview]
+  environment = { NODE_ENV = "production" }
+
+# Branch deploy settings
+[context.branch-deploy]
+  environment = { NODE_ENV = "production" }
+

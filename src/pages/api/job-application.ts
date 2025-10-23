@@ -1,6 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sendJobApplicationEmail, JobApplicationData } from '../../lib/email'
-import { addJobApplicationToSheet } from '../../lib/googleSheets'
+import { addJobApplication, sendEmail } from '../../lib/supabase'
+
+// Interface for job application data
+interface JobApplicationData {
+  name: string
+  email: string
+  phone?: string
+  resume: string
+  coverLetter: string
+  position: string
+  language?: string
+  privacyConsent: boolean
+  applicationDate?: string
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -60,10 +72,10 @@ export default async function handler(
     }
 
     // Validate language if provided
-    if (language && !['en', 'es'].includes(language)) {
+    if (language && !['en', 'es', 'de'].includes(language)) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid language. Supported languages: en, es'
+        message: 'Invalid language. Supported languages: en, es, de'
       })
     }
 
@@ -80,36 +92,20 @@ export default async function handler(
       applicationDate: new Date().toISOString()
     }
 
-    // Send email notification
-    const emailResult = await sendJobApplicationEmail(applicationData)
+    // Save to Supabase
+    const supabaseResult = await addJobApplication({
+      name: applicationData.name,
+      email: applicationData.email,
+      phone: applicationData.phone,
+      position: applicationData.position,
+      resume: applicationData.resume,
+      cover_letter: applicationData.coverLetter,
+      language: applicationData.language || 'es',
+      privacy_consent: applicationData.privacyConsent,
+    })
 
-    // Save to Google Sheets (don't fail if this fails - email is the priority)
-    let sheetsResult = null
-    try {
-      sheetsResult = await addJobApplicationToSheet(applicationData)
-      if (sheetsResult.success) {
-        console.log('Job application successfully added to Google Sheets:', email)
-      } else {
-        console.warn('Failed to add job application to Google Sheets (but email sent):', sheetsResult.error)
-      }
-    } catch (sheetsError) {
-      console.warn('Error saving job application to Google Sheets (but email sent):', sheetsError)
-    }
-
-    if (emailResult.success) {
-      // Return success message in the appropriate language
-      const message = applicationData.language === 'en' 
-        ? 'Application submitted successfully! We will contact you soon.'
-        : 'Aplicación enviada exitosamente! Te contactaremos pronto.'
-      
-      return res.status(200).json({
-        success: true,
-        message,
-        // Optionally include Google Sheets status for debugging
-        sheetsStatus: sheetsResult?.success ? 'saved' : 'failed'
-      })
-    } else {
-      console.error('Job application email error:', emailResult.error)
+    if (!supabaseResult.success) {
+      console.error('Failed to add job application to Supabase:', supabaseResult.error)
       
       // Return error message in the appropriate language
       const errorMessage = applicationData.language === 'en'
@@ -121,6 +117,53 @@ export default async function handler(
         message: errorMessage
       })
     }
+
+    console.log('Job application successfully added to Supabase:', email)
+
+    // Send notification email to admin via Edge Function
+    const adminEmailResult = await sendEmail({
+      type: 'job_application',
+      data: {
+        name: applicationData.name,
+        email: applicationData.email,
+        phone: applicationData.phone,
+        position: applicationData.position,
+        resume: applicationData.resume,
+        coverLetter: applicationData.coverLetter,
+      },
+      language: applicationData.language,
+    })
+
+    if (!adminEmailResult.success) {
+      console.warn('Failed to send admin notification email:', adminEmailResult.error)
+      // Continue - application is saved even if admin notification fails
+    }
+
+    // Send confirmation email to applicant via Edge Function
+    const confirmationEmailResult = await sendEmail({
+      type: 'job_application_confirmation',
+      data: {
+        name: applicationData.name,
+        email: applicationData.email,
+        position: applicationData.position,
+      },
+      language: applicationData.language,
+    })
+
+    if (!confirmationEmailResult.success) {
+      console.warn('Failed to send confirmation email:', confirmationEmailResult.error)
+      // Continue - application is saved even if confirmation email fails
+    }
+
+    // Return success message in the appropriate language
+    const message = applicationData.language === 'en' 
+      ? 'Application submitted successfully! We will contact you soon.'
+      : 'Aplicación enviada exitosamente! Te contactaremos pronto.'
+    
+    return res.status(200).json({
+      success: true,
+      message,
+    })
 
   } catch (error) {
     console.error('Job application API error:', error)

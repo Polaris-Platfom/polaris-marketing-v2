@@ -1,6 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sendNewsletterEmail, NewsletterFormData } from '../../lib/email'
-import { addSubscriberToSheet, checkEmailExists, SubscriberData } from '../../lib/googleSheets'
+import { addSubscriber, checkEmailExists, sendEmail } from '../../lib/supabase'
+
+// Interface for newsletter form data
+interface NewsletterFormData {
+  email: string
+  name?: string
+  source: string
+  language?: string
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -35,31 +42,11 @@ export default async function handler(
     }
 
     // Validate language if provided
-    if (language && !['en', 'es'].includes(language)) {
+    if (language && !['en', 'es', 'de'].includes(language)) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid language. Supported languages: en, es'
+        message: 'Invalid language. Supported languages: en, es, de'
       })
-    }
-
-    // Check if email already exists in Google Sheets
-    try {
-      const emailExistsResult = await checkEmailExists(email)
-      if (emailExistsResult.exists) {
-        // Return appropriate message based on language
-        const duplicateMessage = language === 'en' 
-          ? 'This email address is already subscribed to our newsletter. Thank you for your interest!'
-          : 'Este email ya está suscrito a nuestro newsletter. ¡Gracias por tu interés!'
-        
-        return res.status(409).json({
-          success: false,
-          message: duplicateMessage,
-          code: 'ALREADY_SUBSCRIBED'
-        })
-      }
-    } catch (checkError) {
-      // If we can't check for duplicates, continue with normal flow
-      console.warn('Error checking email existence - continuing with subscription:', checkError)
     }
 
     // Set default values if not provided
@@ -70,46 +57,45 @@ export default async function handler(
       language: language || 'es' // Default to Spanish
     }
 
-    // Send email
-    const emailResult = await sendNewsletterEmail(newsletterData)
-
-    // Prepare data for Google Sheets
-    const subscriberData: SubscriberData = {
-      name: newsletterData.name,
-      email: newsletterData.email,
-      source: newsletterData.source,
-      language: newsletterData.language || 'es', // Ensure language is always a string
-      subscriptionDate: new Date().toISOString()
-    }
-
-    // Save to Google Sheets (don't fail if this fails - email is the priority)
-    let sheetsResult = null
-    try {
-      sheetsResult = await addSubscriberToSheet(subscriberData)
-      if (sheetsResult.success) {
-        console.log('Subscriber successfully added to Google Sheets:', email)
-      } else {
-        console.warn('Failed to add subscriber to Google Sheets (but email sent):', sheetsResult.error)
-      }
-    } catch (sheetsError) {
-      console.warn('Error saving to Google Sheets (but email sent):', sheetsError)
-    }
-
-    if (emailResult.success) {
-      // Return success message in the appropriate language
-      const message = newsletterData.language === 'en' 
-        ? 'Successfully subscribed to newsletter! Check your email for confirmation.'
-        : 'Te has suscrito exitosamente al newsletter. Revisa tu email para confirmación.'
+    // Check if email already exists in Supabase
+    const emailExistsResult = await checkEmailExists(email)
+    if (emailExistsResult.exists) {
+      // Return appropriate message based on language
+      const duplicateMessage = newsletterData.language === 'en' 
+        ? 'This email address is already subscribed to our newsletter. Thank you for your interest!'
+        : 'Este email ya está suscrito a nuestro newsletter. ¡Gracias por tu interés!'
       
-      return res.status(200).json({
-        success: true,
-        message,
-        // Optionally include Google Sheets status for debugging
-        sheetsStatus: sheetsResult?.success ? 'saved' : 'failed'
+      return res.status(409).json({
+        success: false,
+        message: duplicateMessage,
+        code: 'ALREADY_SUBSCRIBED'
       })
-    } else {
-      console.error('Newsletter email error:', emailResult.error)
+    }
+
+    // Add subscriber to Supabase
+    const supabaseResult = await addSubscriber({
+      email: newsletterData.email,
+      name: newsletterData.name,
+      source: newsletterData.source,
+      language: newsletterData.language || 'es',
+    })
+
+    if (!supabaseResult.success) {
+      console.error('Failed to add subscriber to Supabase:', supabaseResult.error)
       
+      // Check if it's a duplicate error (shouldn't happen after our check, but just in case)
+      if (supabaseResult.error?.code === 'ALREADY_SUBSCRIBED') {
+        const duplicateMessage = newsletterData.language === 'en' 
+          ? 'This email address is already subscribed to our newsletter.'
+          : 'Este email ya está suscrito a nuestro newsletter.'
+        
+        return res.status(409).json({
+          success: false,
+          message: duplicateMessage,
+          code: 'ALREADY_SUBSCRIBED'
+        })
+      }
+
       // Return error message in the appropriate language
       const errorMessage = newsletterData.language === 'en'
         ? 'Error subscribing to newsletter. Please try again later.'
@@ -120,6 +106,42 @@ export default async function handler(
         message: errorMessage
       })
     }
+
+    console.log('Subscriber successfully added to Supabase:', email)
+
+    // Send notification email to admin via Edge Function
+    const adminEmailResult = await sendEmail({
+      type: 'newsletter',
+      data: newsletterData,
+      language: newsletterData.language,
+    })
+
+    if (!adminEmailResult.success) {
+      console.warn('Failed to send admin notification email:', adminEmailResult.error)
+      // Continue - user is subscribed even if admin notification fails
+    }
+
+    // Send welcome email to subscriber via Edge Function
+    const welcomeEmailResult = await sendEmail({
+      type: 'newsletter_welcome',
+      data: newsletterData,
+      language: newsletterData.language,
+    })
+
+    if (!welcomeEmailResult.success) {
+      console.warn('Failed to send welcome email:', welcomeEmailResult.error)
+      // Continue - user is subscribed even if welcome email fails
+    }
+
+    // Return success message in the appropriate language
+    const message = newsletterData.language === 'en' 
+      ? 'Successfully subscribed to newsletter! Check your email for confirmation.'
+      : 'Te has suscrito exitosamente al newsletter. Revisa tu email para confirmación.'
+    
+    return res.status(200).json({
+      success: true,
+      message,
+    })
 
   } catch (error) {
     console.error('Newsletter API error:', error)

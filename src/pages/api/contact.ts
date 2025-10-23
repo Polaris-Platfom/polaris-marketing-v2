@@ -1,5 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sendContactEmail, ContactFormData } from '../../lib/email'
+import { sendEmail } from '../../lib/supabase'
+
+// Interface for contact form data
+interface ContactFormData {
+  name: string
+  email: string
+  phone?: string
+  company?: string
+  message: string
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -41,13 +50,16 @@ export default async function handler(
       })
     }
 
-    // Send email
-    const result = await sendContactEmail({
-      name,
-      email,
-      phone,
-      company,
-      message
+    // Send email via Edge Function (no database storage per requirements)
+    const result = await sendEmail({
+      type: 'contact',
+      data: {
+        name,
+        email,
+        phone,
+        company,
+        message
+      }
     })
 
     if (result.success) {
